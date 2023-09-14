@@ -219,10 +219,10 @@ const LandingPageSectionOne = () => {
                         variant="contained"
                         onClick={goToSignInPage}
                      >
-                        To come in
+                        Кирүү
                      </ButtonToComeIn>
                      <RegisterBtn variant="outlined" onClick={goToSignUpPage}>
-                        Register
+                        Катталуу
                      </RegisterBtn>
                   </>
                )}
@@ -232,18 +232,15 @@ const LandingPageSectionOne = () => {
 
          <DivInfo id="home">
             <EnglishProficiency>
-               <ProveYourEnglish>
-                  Prove your English proficiency today with
-               </ProveYourEnglish>
-               <Bilingual>bilingual</Bilingual>
+               <Bilingual>Kyrgyz Key</Bilingual>
+               <ProveYourEnglish>кыргыз тилинин ачкычы</ProveYourEnglish>
             </EnglishProficiency>
             <TextDivInfo>
-               For nearly 30 years, learners have turned to Rosetta Stone to
-               build the fluency and confidence they need to speak new
-               languages.
+               Кыргыз тилин өңдөңүз - бул өлкөнүн маданият жана тарыхынын жолун
+               ачкычык.
             </TextDivInfo>
             <ButtonToBegin>
-               <ButtonLanding onClick={goToTests}>to begin</ButtonLanding>
+               <ButtonLanding onClick={goToTests}>баштоо</ButtonLanding>
             </ButtonToBegin>
          </DivInfo>
 
