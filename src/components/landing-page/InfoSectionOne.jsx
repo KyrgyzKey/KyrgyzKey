@@ -300,8 +300,8 @@ const InfoSectionOne = ({ count }) => {
                </BorderFrameImageOne>
             </ImagePaperAirline>
             <Text>
-               Over 10,000 fee waivers for the Bilingual English Test are
-               offered annually.
+               Жыл сайын эки тилдүү англис тили тести үчүн 10,000ден ашык
+               төлөмдөн бошотуу сунушталат.
             </Text>
          </InfoDivOne>
          <InfoDivSecond variants={animation}>
@@ -321,7 +321,8 @@ const InfoSectionOne = ({ count }) => {
                </BorderFrameImageTwo>
             </ImageGlobus>
             <Text>
-               Students from over 100 countries and territories have benefitted.
+               100дөн ашык өлкөлөрдөн жана аймактардан келген студенттер пайда
+               көрүштү.
             </Text>
          </InfoDivSecond>
          <InfoDivThird variants={animation}>
@@ -342,8 +343,8 @@ const InfoSectionOne = ({ count }) => {
                </BorderFrameImageThird>
             </ImagePiggyBank>
             <Text>
-               Eligible students can take the test with absolutely zero cost to
-               them.
+               Жарамдуу студенттер тестти нөлдүк наркы менен тапшыра алышат
+               алар.
             </Text>
          </InfoDivThird>
       </InfoCard>

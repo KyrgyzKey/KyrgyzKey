@@ -301,37 +301,35 @@ const InfoSection = () => {
          </ScrollTrigger>
          <Description>
             <div>
-               <UserExpiriance>Unparalleled user experience</UserExpiriance>
+               <UserExpiriance>Теңдешсиз колдонуучу тажрыйбасы</UserExpiriance>
                <DescriptionText>
-                  The most effective way to perfect a language is by immersing
-                  yourself in it. Rosetta Stone for Enterprise delivers an
-                  effective end-to-end experience, founded on a wealth of
-                  carefully structured content. Each learner has the opportunity
-                  to balance independent study with optional online tutoring in
-                  a way that fits their schedule and language learning goals.
+                  Тилди өркүндөтүүнүн эң эффективдүү жолу – бул тилге чөмүлүү.
+                  Rosetta Stone for Enterprise кылдат структураланган мазмундун
+                  байлыгына негизделген натыйжалуу аягына чейин тажрыйба берет.
+                  Ар бир окуучу өз графигине жана тил үйрөнүү максаттарына
+                  ылайыктуу түрдө өз алдынча окуу менен кошумча онлайн
+                  репетитордук тең салмактуулукка ээ болуу мүмкүнчүлүгүнө ээ.
                </DescriptionText>
                <DivSeparation>
                   <DivAccessible>
                      <ImgAccessible src={accessible} />
                      <ImgAccessibleText>
-                        Accessible anytime, anywhere
+                        Каалаган убакта, каалаган жерден жеткиликтүү
                      </ImgAccessibleText>
                   </DivAccessible>
                   <DivExtensive>
                      <ImgExtensive src={extensive} />
-                     <ImgExtensiveText>
-                        Extensive business content
-                     </ImgExtensiveText>
+                     <ImgExtensiveText>Кеңири бизнес мазмуну</ImgExtensiveText>
                   </DivExtensive>
                </DivSeparation>
                <DivSeparation>
                   <DivSpeech>
                      <ImgSpeech src={speech} />
-                     <ImgSpeechText>Leading speech recognition</ImgSpeechText>
+                     <ImgSpeechText>Алдыңкы кепти таануу</ImgSpeechText>
                   </DivSpeech>
                   <DivTutoring>
                      <ImgTutoring src={tutoring} />
-                     <TutoringText>Unlimited live tutoring</TutoringText>
+                     <TutoringText>Чексиз жандуу окутуу</TutoringText>
                   </DivTutoring>
                </DivSeparation>
             </div>
