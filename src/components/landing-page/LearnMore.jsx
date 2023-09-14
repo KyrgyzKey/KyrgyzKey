@@ -59,7 +59,7 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
                variants={textAnimation}
             >
-               <Title>Learn more</Title>
+               <Title>Көбүрөөк билүү</Title>
             </TitleContainer>
             <StyledIcon />
             <Container
@@ -68,13 +68,14 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Expand your applicant pool</Title1>
+                  <Title1>Талапкер пулуңузду кеңейтиңиз</Title1>
                   <Text1>
-                     Tap into a diverse pool of candidates from 100+ countries
-                     and
+                     100дөн ашуун өлкөдөн келген талапкерлердин ар түрдүү
+                     пулунан жана
                      <br />
-                     territories of origin, who have taken the Bilingual English
-                     Test <br /> because of its radical accessibility.
+                     эки тилдүү кыргыз тили боюнча сынактан өткөн аймактар
+                     <br /> анын радикалдуу жеткиликтүүлүгүнөн улам пайда
+                     алыңыз.
                   </Text1>
                </motion.div>
 
@@ -98,15 +99,15 @@ const LearnMore = () => {
                   style={{ overflow: 'hidden' }}
                   variants={secondInfoAnimation}
                >
-                  <Title2>Built on the latest assessment sciencee</Title2>
+                  <Title2>Акыркы баа берүү илиминин негизинде курулган</Title2>
                   <Text2>
-                     The Duolingo English Test is a computer adaptive test
-                     backed
+                     Duolingo English Test - бул компьютердик адаптивдүү тест
+                     колдогон
                      <br />
-                     by rigorous research, with results that are highly
-                     correlated
+                     атуу изилдөө менен, жогорку натыйжалары менен
                      <br />
-                     with other major assessments such as the TOEFL and the
+                     корреляцияланган TOEFL жана башка негизги баа берүүлөр
+                     менен
                      <br /> IELTS.
                   </Text2>
                </motion.div>
@@ -117,14 +118,15 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Innovative test security</Title1>
+                  <Title1>Инновациялык тест коопсуздугу</Title1>
                   <Text1>
-                     Industry-leading security protocols, individual test
-                     proctoring,
+                     Өнөр жайдын алдыңкы коопсуздук протоколдору, жеке
+                     тестирлөө,
                      <br />
-                     and computer adaptive technology help prevent fraud and{' '}
+                     жана компьютердик адаптивдик технология алдамчылыктын алдын
+                     алууга жардам берет жана
                      <br />
-                     cheating and ensure results you can trust.
+                     алдоо жана ишене ала турган натыйжаларды камсыз кылуу.
                   </Text1>
                </motion.div>
                <StyledSecuryIcon
@@ -144,13 +146,15 @@ const LearnMore = () => {
                   style={{ position: 'relative', zIndex: 1 }}
                />
                <motion.div variants={secondInfoAnimation}>
-                  <Title2>Convenient results dashboard</Title2>
+                  <Title2>Ыңгайлуу натыйжалар тактасы</Title2>
                   <Text2>
-                     Access candidates’ certificates, video interviews, and
-                     writing
+                     Талапкерлердин сертификаттарына, видео маектерине жана
+                     жазуу
                      <br />
-                     samples through a free and secure dashboard. Quickly and
-                     <br /> easily view applicant data with filtering tools.
+                     үлгүлөрдү акысыз жана коопсуз башкаруу тактасы аркылуу. Тез
+                     жана
+                     <br /> чыпкалоо куралдары менен арыз берүүчүнүн
+                     маалыматтарын оңой көрүү.
                   </Text2>
                </motion.div>
             </Container3>
@@ -160,13 +164,16 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Secure Design</Title1>
+                  <Title1>Коопсуз дизайн</Title1>
                   <Text1>
-                     Adaptive test engine dynamically administers test questions
-                     <br /> from a database of hundreds of thousands of items.
-                     <br /> Someone would have to take the test more than 1,000
-                     times
-                     <br /> to see a question repeated.
+                     Жүз миңдеген кызматтардын маалымат базасынан.
+                     <br />
+                     Кимдир бирөө 1000ден ашык тест тапшырышы керек болсо бир
+                     жолу суроонун кайталанганын көрүү үчүн.
+                     <br />
+                     Адаптивдүү тестирлөө системасы динамикалык түрдө тест
+                     суроолорун берет.
+                     <br />
                   </Text1>
                </motion.div>
                <StyledDesignIcon
