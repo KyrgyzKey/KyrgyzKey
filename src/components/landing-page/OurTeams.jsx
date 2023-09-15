@@ -10,6 +10,7 @@ import NiaraVideo from '../../assets/videos/niara.MP4'
 import KumaVideo from '../../assets/videos/kuma.MP4'
 import AdilVideo from '../../assets/videos/adil.MP4'
 import BekzatVideo from '../../assets/videos/bekzat.MP4'
+import Trix from '../../assets/videos/trix.MP4'
 
 const partners = [
    { id: '1', video: NiaraVideo },
@@ -20,6 +21,7 @@ const partners = [
    { id: '6', video: KumaVideo },
    { id: '7', video: AdilVideo },
    { id: '8', video: BekzatVideo },
+   { id: '9', video: Trix },
 ]
 
 export const OurTeams = () => {
