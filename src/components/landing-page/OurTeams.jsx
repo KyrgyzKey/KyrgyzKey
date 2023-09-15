@@ -7,9 +7,10 @@ import AnarbekVideo from '../../assets/videos/anarbek.MP4'
 import EldanaVideo from '../../assets/videos/eldana.MP4'
 import JypargulVideo from '../../assets/videos/jypargyl.MP4'
 import NiaraVideo from '../../assets/videos/niara.MP4'
-import KumaVideo from '../../assets/videos/kuma.MP4'
-import AdilVideo from '../../assets/videos/adil.MP4'
+import KumaVideo from '../../assets/videos/kuma.PM4.MOV'
+import AdilVideo from '../../assets/videos/adil.PM4.MOV'
 import BekzatVideo from '../../assets/videos/bekzat.MP4'
+import Trix from '../../assets/videos/trix.MP4'
 
 const partners = [
    { id: '1', video: NiaraVideo },
@@ -20,6 +21,7 @@ const partners = [
    { id: '6', video: KumaVideo },
    { id: '7', video: AdilVideo },
    { id: '8', video: BekzatVideo },
+   { id: '9', video: Trix },
 ]
 
 export const OurTeams = () => {
