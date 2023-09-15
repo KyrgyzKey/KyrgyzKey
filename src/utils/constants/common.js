@@ -56,20 +56,20 @@ export const infoCardArray = [
 export const ourTeamArray = [
    {
       img: OurTeamImg1,
-      name: 'Mairamgul Ormonova',
-      employee: 'Founder Bilingual',
+      name: 'Aimona Dunaeva',
+      employee: '',
       id: 1,
    },
    {
       img: OurTeamImg2,
-      name: 'Adil Aitbaev',
-      employee: 'Marketer',
+      name: 'Anarbek Ishembek uulu',
+      employee: '',
       id: 2,
    },
    {
       img: OurTeamImg3,
-      name: 'Kaukhar Zarlykova',
-      employee: 'Developer',
+      name: 'Kutman Kaseinov',
+      employee: '',
       id: 3,
    },
    {
