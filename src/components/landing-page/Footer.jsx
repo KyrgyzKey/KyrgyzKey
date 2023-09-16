@@ -90,9 +90,9 @@ const StyledFooter = styled('footer')(() => ({
 }))
 
 const StyledTitle = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
-   fontStyle: 'normal',
+   fontFamily: 'Open Sans',
    fontWeight: 700,
+   letterSpacing: '3px',
    fontSize: '40px',
    lineHeight: '51px',
    borderBottom: '1px solid #4a4a4a',
