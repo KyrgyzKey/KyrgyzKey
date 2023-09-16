@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import { styled } from '@mui/material'
 import { motion } from 'framer-motion'
 import ScrollTrigger from 'react-scroll-trigger'
-import { ourTeamArray } from '../../utils/constants/common'
+// import { ourTeamArray } from '../../utils/constants/common'
 import { textAnimation } from '../../utils/helpers/animations'
 import accessible from '../../assets/images/accessible.png'
 import speech from '../../assets/images/speech.png'
@@ -15,18 +15,19 @@ import tutoring from '../../assets/images/tutoring.png'
 import yourtaImg from '../../assets/images/education.jpg'
 
 import InfoSectionOne from './InfoSectionOne'
+import { OurTeams } from './OurTeams'
 
-const imgAnimation = {
-   hidden: {
-      opacity: 0,
-      x: 100,
-   },
-   visible: (custom) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: custom * 0.1 },
-   }),
-}
+// const imgAnimation = {
+//    hidden: {
+//       opacity: 0,
+//       x: 100,
+//    },
+//    visible: (custom) => ({
+//       opacity: 1,
+//       x: 0,
+//       transition: { delay: custom * 0.1 },
+//    }),
+// }
 
 const Card = styled('div')(() => ({
    width: '100%',
@@ -227,57 +228,57 @@ const TextOurTeam = styled(motion.div)(() => ({
    textTransform: 'capitalize',
    color: '#3752B4',
 }))
-const OurTeamImage = styled('div')(({ imageSrc }) => ({
-   backgroundImage: `url(${imageSrc})`,
-   backgroundSize: 'cover',
-   backgroundRepeat: 'no-repeat',
-   borderRadius: '0px 40px 0px 40px',
-   width: '180px',
-   height: '180px',
-}))
-const DivImage = styled(motion.div)(() => ({
-   display: 'flex',
-   marginTop: '48px',
-   flexWrap: 'wrap',
-}))
-const DivImageEmployeeName = styled(motion.div)(() => ({
-   display: 'flex',
-   flexDirection: 'column',
-   marginRight: '30px',
-}))
+// const OurTeamImage = styled('div')(({ imageSrc }) => ({
+//    backgroundImage: `url(${imageSrc})`,
+//    backgroundSize: 'cover',
+//    backgroundRepeat: 'no-repeat',
+//    borderRadius: '0px 40px 0px 40px',
+//    width: '180px',
+//    height: '180px',
+// }))
+// const DivImage = styled(motion.div)(() => ({
+//    display: 'flex',
+//    marginTop: '48px',
+//    flexWrap: 'wrap',
+// }))
+// const DivImageEmployeeName = styled(motion.div)(() => ({
+//    display: 'flex',
+//    flexDirection: 'column',
+//    marginRight: '30px',
+// }))
 
-const DivEmployeeNamePerson = styled('div')(() => ({
-   height: '41px',
-   width: '124px',
-   margin: '0 auto',
-   display: 'flex',
-   flexDirection: 'column',
-   alignItems: 'center',
-   textAlign: 'center',
-   marginTop: '14px',
-}))
-const NamePersonEmployee = styled('div')(() => ({
-   width: '185px',
-   height: '21px',
-   fontFamily: 'Poppins',
-   fontStyle: 'normal',
-   fontWeight: '600',
-   fontSize: '16px',
-   lineHeight: '130%',
-   color: '#3A10E5',
-}))
-const Employee = styled('div')(() => ({
-   width: '124px',
-   height: '18px',
-   marginTop: '2px',
-   fontFamily: 'Poppins',
-   fontStyle: 'normal',
-   fontWeight: 400,
-   fontSize: '14px',
-   lineHeight: '130%',
-   textAlign: 'center',
-   color: '#020202',
-}))
+// const DivEmployeeNamePerson = styled('div')(() => ({
+//    height: '41px',
+//    width: '124px',
+//    margin: '0 auto',
+//    display: 'flex',
+//    flexDirection: 'column',
+//    alignItems: 'center',
+//    textAlign: 'center',
+//    marginTop: '14px',
+// }))
+// const NamePersonEmployee = styled('div')(() => ({
+//    width: '185px',
+//    height: '21px',
+//    fontFamily: 'Poppins',
+//    fontStyle: 'normal',
+//    fontWeight: '600',
+//    fontSize: '16px',
+//    lineHeight: '130%',
+//    color: '#3A10E5',
+// }))
+// const Employee = styled('div')(() => ({
+//    width: '124px',
+//    height: '18px',
+//    marginTop: '2px',
+//    fontFamily: 'Poppins',
+//    fontStyle: 'normal',
+//    fontWeight: 400,
+//    fontSize: '14px',
+//    lineHeight: '130%',
+//    textAlign: 'center',
+//    color: '#020202',
+// }))
 
 // const blockAnimate = {
 //    offscreen: {
@@ -378,8 +379,9 @@ const InfoSection = () => {
             whileInView="visible"
             viewport={{ amount: 0.2 }}
          >
-            <TextOurTeam variants={textAnimation}>Our Team</TextOurTeam>
-            <DivImage>
+            <TextOurTeam variants={textAnimation}>Биздин курама</TextOurTeam>
+            <OurTeams />
+            {/* <DivImage>
                {ourTeamArray.map((elem) => (
                   <DivImageEmployeeName
                      key={elem.id}
@@ -393,7 +395,7 @@ const InfoSection = () => {
                      </DivEmployeeNamePerson>
                   </DivImageEmployeeName>
                ))}
-            </DivImage>
+            </DivImage> */}
          </OurTeam>
       </Card>
    )

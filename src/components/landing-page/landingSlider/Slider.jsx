@@ -12,40 +12,40 @@ import { textAnimation } from '../../../utils/helpers/animations'
 
 const info = [
    {
-      title: 'Confirm your English proficiency today!',
-      text: 'For nearly 30 years, lea rners have turned to Rosetta Stone to build the fluency and confidence they need to speak new languages.',
+      title: 'Айтылышы:',
+      text: 'Кыргыз тилинин айтылышы регионго жараша ар кандай. Мисалы, Кыргызстандын ар кайсы аймактарында ар кандай акценттер жана диалектилер колдонулат.',
       img: <Globus />,
       id: new Date().toISOString(),
       titleColor: '#FE9102',
       background: '#212629',
    },
    {
-      title: 'Confirm your English proficiency today!',
-      text: 'For nearly 30 years, learners have turned to Rosetta Stone to build the fluency and confidence they need to speak new languages.',
+      title: 'Этникалык тарых:',
+      text: 'Кыргыз тили кыргыз элинин бай тарыхы, анын ичинде миграциясы, көчмөн турмушу жана маданий мурасы менен байланышкан.',
       img: <Globus />,
       id: new Date().toISOString(),
       titleColor: '#FFFFFF',
       background: '#FE9102',
    },
    {
-      title: 'Confirm your English proficiency today!',
-      text: 'For nearly 30 years, learners have turned to Rosetta Stone to build the fluency and confidence they need to speak new languages.',
+      title: 'Пун сөздөр:',
+      text: 'Кыргыз тили ойноок болушу мүмкүн, кээде сөздөр эки ача мааниге ээ же сөздөр менен ойнолуп, кызыктуу тилдик тамашаларга жана пундарга алып келиши мүмкүн.',
       img: <Globus />,
       id: new Date().toISOString(),
       titleColor: '#FE9102',
       background: '#212629',
    },
    {
-      title: 'Confirm your English proficiency today!',
-      text: 'For nearly 30 years, learners have turned to Rosetta Stone to build the fluency and confidence they need to speak new languages.',
+      title: 'Өздөштүрүүлөр:',
+      text: 'Башка көптөгөн тилдер сыяктуу эле кыргыз тилинде да араб, фарсы, орус жана англис сыяктуу башка тилдерден алынган сөздөр бар.',
       img: <Globus />,
       id: new Date().toISOString(),
       titleColor: '#FFFFFF',
       background: '#FE9102',
    },
    {
-      title: 'Confirm your English proficiency today!',
-      text: 'For nearly 30 years, learners have turned to Rosetta Stone to build the fluency and confidence they need to speak new languages.',
+      title: 'Кыргыз алфавити жана шахмат:',
+      text: 'Кыргыз алфавити шахмат тактасына окшош. Ал 33 тамгадан турат жана кээ бирлери шахмат тактасындагыдай ак жана кара квадраттарга ээ.',
       img: <Globus />,
       id: new Date().toISOString(),
       titleColor: '#FE9102',
@@ -96,7 +96,7 @@ const LandingSlider = () => {
          viewport={{ amount: 0.4 }}
       >
          <TitleContainer variants={textAnimation}>
-            <Title>Check out each question type</Title>
+            <Title>Кыргыз тили боюнча кызыктуу фактылар</Title>
          </TitleContainer>
          <Container variants={textAnimation}>
             <StyledSlider style={{ position: 'relative' }} {...settings}>
