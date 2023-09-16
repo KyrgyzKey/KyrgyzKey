@@ -137,7 +137,7 @@ const SecondSlider = () => {
    return (
       <>
          <TitleContainer>
-            <Title>Why people love Bilingual</Title>
+            <Title>Эмне үчүн KyrgyzKey?</Title>
          </TitleContainer>
          <Container>
             <StyledSlider {...settings}>
