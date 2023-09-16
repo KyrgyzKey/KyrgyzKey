@@ -6,7 +6,6 @@ import logo from '../../assets/icons/logo.svg'
 import imageBubble from '../../assets/images/bubble.png'
 import cap from '../../assets/images/cap.png'
 import imageBook from '../../assets/images/books.png'
-// import LandingButton from '../UI/buttons/LandingButtton'
 import Button from '../UI/buttons/Buttons'
 import { signOut } from '../../redux/auth/auth.thunk'
 import ButtonLanding from '../UI/buttons/LandingButton'
@@ -227,7 +226,6 @@ const LandingPageSectionOne = () => {
                )}
             </ButtonDiv>
          </LogoAndButtonDiv>
-         {/* Header */}
 
          <DivInfo id="home">
             <EnglishProficiency>
