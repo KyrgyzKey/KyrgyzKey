@@ -50,7 +50,7 @@ const UsefulVideos = () => {
       >
          <FirstSection>
             <TitleContainer variants={textAnimation}>
-               <Title> Useful videos </Title>
+               <Title> Пайдалуу маалыматтар </Title>
             </TitleContainer>
             <SecondSection>
                {videos.map((item) => {
