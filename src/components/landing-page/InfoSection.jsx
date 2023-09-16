@@ -7,10 +7,12 @@ import accessible from '../../assets/images/accessible.png'
 import speech from '../../assets/images/speech.png'
 import extensive from '../../assets/images/extensive.png'
 import tutoring from '../../assets/images/tutoring.png'
-import booksBackground from '../../assets/icons/background.svg'
-import bookImg from '../../assets/icons/bookImg.svg'
-import learnImg from '../../assets/icons/learnImg.svg'
-import readingImg from '../../assets/icons/reading.svg'
+// import booksBackground from '../../assets/icons/background.svg'
+// import bookImg from '../../assets/icons/bookImg.svg'
+// import learnImg from '../../assets/icons/learnImg.svg'
+// import readingImg from '../../assets/icons/reading.svg'
+import yourtaImg from '../../assets/images/edication.svg'
+
 import InfoSectionOne from './InfoSectionOne'
 import { OurTeams } from './OurTeams'
 
@@ -143,43 +145,57 @@ const DivTutoring = styled('div')(() => ({
    marginTop: '48.98px',
 }))
 
-const ImgBackground = styled('div')(({ backgroundImage }) => ({
-   position: 'relative',
-   marginTop: '17px',
-   marginRight: '154.19px',
-   width: '115rem',
-   backgroundImage: `url(${backgroundImage})`,
-   backgroundPosition: 'center',
-   backgroundRepeat: 'no-repeat',
-}))
+// const YourtaImg = styled('div')(({ backgroundImage }) => ({
+//    position: 'relative',
+//    marginTop: '17px',
+//    marginRight: '154.19px',
+//    width: '115rem',
+//    backgroundImage: `url(${backgroundImage})`,
+//    backgroundPosition: 'center',
+//    backgroundRepeat: 'no-repeat',
+// }))
 
-const ChildContainer = styled(motion.div)(() => ({
-   position: 'absolute',
-   top: 0,
-   left: 0,
-   right: 0,
-   bottom: 0,
-}))
+// const ImgBackground = styled('div')(({ backgroundImage }) => ({
+//    position: 'relative',
+//    marginTop: '17px',
+//    marginRight: '154.19px',
+//    width: '115rem',
+//    backgroundImage: `url(${backgroundImage})`,
+//    backgroundPosition: 'center',
+//    backgroundRepeat: 'no-repeat',
+// }))
 
-const ImgBook = styled(motion.img)(() => ({
-   position: 'relative',
-   zIndex: '2',
-   left: '3.5rem',
-   top: '4.5rem',
-}))
-const ImgLearn = styled(motion.img)(() => ({
-   position: 'relative',
-   zIndex: '4',
-   right: '20rem',
-   bottom: '13rem',
-}))
-const ImgReading = styled(motion.img)(() => ({
-   position: 'relative',
-   zIndex: '3',
-   left: '21.5rem',
-   bottom: '14rem',
-}))
+// const ChildContainer = styled(motion.div)(() => ({
+//    position: 'absolute',
+//    top: 0,
+//    left: 0,
+//    right: 0,
+//    bottom: 0,
+// }))
 
+// const ImgBook = styled(motion.img)(() => ({
+//    position: 'relative',
+//    zIndex: '2',
+//    left: '3.5rem',
+//    top: '4.5rem',
+// }))
+// const ImgLearn = styled(motion.img)(() => ({
+//    position: 'relative',
+//    zIndex: '4',
+//    right: '20rem',
+//    bottom: '13rem',
+// }))
+// const ImgReading = styled(motion.img)(() => ({
+//    position: 'relative',
+//    zIndex: '3',
+//    left: '21.5rem',
+//    bottom: '14rem',
+// }))
+const ImgAnimation = styled('img')(() => ({
+   width: '40rem',
+   height: '40rem',
+   // marginRight: '3rem',
+}))
 const DivSeparation = styled('div')(() => ({
    display: 'flex',
    gap: '67.88px',
@@ -199,27 +215,78 @@ const TextOurTeam = styled(motion.div)(() => ({
    textTransform: 'capitalize',
    color: '#3752B4',
 }))
+// const OurTeamImage = styled('div')(({ imageSrc }) => ({
+//    backgroundImage: `url(${imageSrc})`,
+//    backgroundSize: 'cover',
+//    backgroundRepeat: 'no-repeat',
+//    borderRadius: '0px 40px 0px 40px',
+//    width: '180px',
+//    height: '180px',
+// }))
+// const DivImage = styled(motion.div)(() => ({
+//    display: 'flex',
+//    marginTop: '48px',
+//    flexWrap: 'wrap',
+// }))
+// const DivImageEmployeeName = styled(motion.div)(() => ({
+//    display: 'flex',
+//    flexDirection: 'column',
+//    marginRight: '30px',
+// }))
 
-const blockAnimate = {
-   offscreen: {
-      opacity: 0,
-   },
-   onscreen: {
-      opacity: 1,
-      transition: {
-         duration: 1,
-         damping: 3,
-      },
-   },
-   animate: {
-      rotate: [-2, 3, -7, 4, 4], // Rotate back and forth with smaller values
-      transition: {
-         duration: 2.5,
-         repeat: Infinity,
-         repeatType: 'reverse',
-      },
-   },
-}
+// const DivEmployeeNamePerson = styled('div')(() => ({
+//    height: '41px',
+//    width: '124px',
+//    margin: '0 auto',
+//    display: 'flex',
+//    flexDirection: 'column',
+//    alignItems: 'center',
+//    textAlign: 'center',
+//    marginTop: '14px',
+// }))
+// const NamePersonEmployee = styled('div')(() => ({
+//    width: '185px',
+//    height: '21px',
+//    fontFamily: 'Poppins',
+//    fontStyle: 'normal',
+//    fontWeight: '600',
+//    fontSize: '16px',
+//    lineHeight: '130%',
+//    color: '#3A10E5',
+// }))
+// const Employee = styled('div')(() => ({
+//    width: '124px',
+//    height: '18px',
+//    marginTop: '2px',
+//    fontFamily: 'Poppins',
+//    fontStyle: 'normal',
+//    fontWeight: 400,
+//    fontSize: '14px',
+//    lineHeight: '130%',
+//    textAlign: 'center',
+//    color: '#020202',
+// }))
+
+// const blockAnimate = {
+//    offscreen: {
+//       opacity: 0,
+//    },
+//    onscreen: {
+//       opacity: 1,
+//       transition: {
+//          duration: 1,
+//          damping: 3,
+//       },
+//    },
+//    animate: {
+//       rotate: [-2, 3, -7, 4, 4], // Rotate back and forth with smaller values
+//       transition: {
+//          duration: 2.5,
+//          repeat: Infinity,
+//          repeatType: 'reverse',
+//       },
+//    },
+// }
 
 const InfoSection = () => {
    const [count, setCountOn] = useState(false)
@@ -236,18 +303,16 @@ const InfoSection = () => {
             <div>
                <UserExpiriance>Теңдешсиз колдонуучу тажрыйбасы</UserExpiriance>
                <DescriptionText>
-                  Тилди өркүндөтүүнүн эң эффективдүү жолу – бул тилге чөмүлүү.
-                  Rosetta Stone for Enterprise кылдат структураланган мазмундун
-                  байлыгына негизделген натыйжалуу аягына чейин тажрыйба берет.
+                  Тилди өркүндөтүүнүн эң эффективдүү жолу – бул тилге кызыгуу.
                   Ар бир окуучу өз графигине жана тил үйрөнүү максаттарына
-                  ылайыктуу түрдө өз алдынча окуу менен кошумча онлайн
-                  репетитордук тең салмактуулукка ээ болуу мүмкүнчүлүгүнө ээ.
+                  ылайыктуу түрдө өз алдынча окуу менен кошумча онлайн тарбиячы
+                  тең салмактуулукка ээ болуу мүмкүнчүлүгүнө ээ.
                </DescriptionText>
                <DivSeparation>
                   <DivAccessible>
                      <ImgAccessible src={accessible} />
                      <ImgAccessibleText>
-                        Каалаган убакта, каалаган жерден жеткиликтүү
+                        Каалаган жерде жеткиликтуу
                      </ImgAccessibleText>
                   </DivAccessible>
                   <DivExtensive>
@@ -266,7 +331,8 @@ const InfoSection = () => {
                   </DivTutoring>
                </DivSeparation>
             </div>
-            <ImgBackground backgroundImage={booksBackground}>
+            <ImgAnimation src={yourtaImg} alt="" />
+            {/* <ImgBackground backgroundImage={booksBackground}>
                <ChildContainer>
                   <ImgBook
                      variants={blockAnimate}
@@ -293,7 +359,7 @@ const InfoSection = () => {
                      loading="lazy"
                   />
                </ChildContainer>
-            </ImgBackground>
+            </ImgBackground> */}
          </Description>
          <OurTeam
             initial="hidden"

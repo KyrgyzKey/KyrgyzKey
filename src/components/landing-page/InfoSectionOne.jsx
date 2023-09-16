@@ -261,7 +261,6 @@ const BorderFrameImageThird = styled('div')(() => ({
    zIndex: 900,
 }))
 const Text = styled('div')(() => ({
-   fontFamily: 'Poppins',
    width: '100%',
    height: '48px',
    marginTop: '24px',
@@ -299,10 +298,7 @@ const InfoSectionOne = ({ count }) => {
                   </CountNumber>
                </BorderFrameImageOne>
             </ImagePaperAirline>
-            <Text>
-               Жыл сайын эки тилдүү англис тили тести үчүн 10,000ден ашык
-               төлөмдөн бошотуу сунушталат.
-            </Text>
+            <Text>Жылына 10.000ден ашык адамды тейлоого даяр</Text>
          </InfoDivOne>
          <InfoDivSecond variants={animation}>
             <ImageGlobus variants={animation}>
@@ -314,16 +310,13 @@ const InfoSectionOne = ({ count }) => {
                <BorderFrameImageTwo>
                   <CountNumber2>
                      {count && (
-                        <CountUp start={0} end={100} duration={2} delay={0} />
+                        <CountUp start={0} end={24} duration={2} delay={0} />
                      )}
-                     +
+                     h
                   </CountNumber2>
                </BorderFrameImageTwo>
             </ImageGlobus>
-            <Text>
-               100дөн ашык өлкөлөрдөн жана аймактардан келген студенттер пайда
-               көрүштү.
-            </Text>
+            <Text>24 саат бою тейлоого даяр</Text>
          </InfoDivSecond>
          <InfoDivThird variants={animation}>
             <ImagePiggyBank variants={animation}>
@@ -342,10 +335,7 @@ const InfoSectionOne = ({ count }) => {
                   </CountNumber3>
                </BorderFrameImageThird>
             </ImagePiggyBank>
-            <Text>
-               Жарамдуу студенттер тестти нөлдүк наркы менен тапшыра алышат
-               алар.
-            </Text>
+            <Text>Катталгандан кийин 14 кун бекер</Text>
          </InfoDivThird>
       </InfoCard>
    )
