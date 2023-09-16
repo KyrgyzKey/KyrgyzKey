@@ -59,7 +59,7 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
                variants={textAnimation}
             >
-               <Title>Learn more</Title>
+               <Title>Көбүрөөк билүү</Title>
             </TitleContainer>
             <StyledIcon />
             <Container
@@ -68,13 +68,11 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Expand your applicant pool</Title1>
+                  <Title1>Кыргыз тилинде эркин суйлонуз</Title1>
                   <Text1>
-                     Tap into a diverse pool of candidates from 100+ countries
-                     and
+                     KyrgyzKey аркылуу кыргыз тилин уйронунуз
                      <br />
-                     territories of origin, who have taken the Bilingual English
-                     Test <br /> because of its radical accessibility.
+                     жана кыргыз маданияты менен таанышыныз
                   </Text1>
                </motion.div>
 
@@ -92,22 +90,24 @@ const LearnMore = () => {
                <StyledResearchIcon
                   variants={animation}
                   custom={0.7}
-                  style={{ position: 'relative', zIndex: 1 }}
+                  style={{
+                     position: 'relative',
+                     zIndex: 1,
+                     marginLeft: '300px',
+                  }}
                />
                <motion.div
                   style={{ overflow: 'hidden' }}
                   variants={secondInfoAnimation}
                >
-                  <Title2>Built on the latest assessment sciencee</Title2>
+                  <Title2>
+                     Кыргыз тили кафедрасынын курамынын негизинде жасалган
+                  </Title2>
                   <Text2>
-                     The Duolingo English Test is a computer adaptive test
-                     backed
+                     KyrgyzKey аркылуу кыргыз тилин үйрөнүү үчүн жана кыргыз
+                     маданиятын изилдөө үчүн
                      <br />
-                     by rigorous research, with results that are highly
-                     correlated
-                     <br />
-                     with other major assessments such as the TOEFL and the
-                     <br /> IELTS.
+                     тестирлөө болот.
                   </Text2>
                </motion.div>
             </Container1>
@@ -117,14 +117,12 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Innovative test security</Title1>
+                  <Title1>Инновациялык тест коопсуздугу</Title1>
                   <Text1>
-                     Industry-leading security protocols, individual test
-                     proctoring,
+                     Компьютердик адаптивдик технология алдамчылыктын алдын
+                     алууга жардам берет жана
                      <br />
-                     and computer adaptive technology help prevent fraud and{' '}
-                     <br />
-                     cheating and ensure results you can trust.
+                     алдоо жана ишене ала турган натыйжаларды камсыз кылат.
                   </Text1>
                </motion.div>
                <StyledSecuryIcon
@@ -141,16 +139,19 @@ const LearnMore = () => {
                <StyledDashboardIcon
                   variants={animation}
                   custom={0.7}
-                  style={{ position: 'relative', zIndex: 1 }}
+                  style={{
+                     position: 'relative',
+                     zIndex: 1,
+                  }}
                />
                <motion.div variants={secondInfoAnimation}>
-                  <Title2>Convenient results dashboard</Title2>
+                  <Title2>Ыңгайлуу натыйжалар тактасы</Title2>
                   <Text2>
-                     Access candidates’ certificates, video interviews, and
-                     writing
+                     Талапкерлердин сертификаттарына, видео маектерине жана
+                     жазуу
                      <br />
-                     samples through a free and secure dashboard. Quickly and
-                     <br /> easily view applicant data with filtering tools.
+                     үлгүлөрдү акысыз жана коопсуз башкаруу тактасы аркылуу
+                     <br /> колдонуучунун берүүчүнүн маалыматтарын оңой көрүү.
                   </Text2>
                </motion.div>
             </Container3>
@@ -160,13 +161,10 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
             >
                <motion.div variants={infoAnimation}>
-                  <Title1>Secure Design</Title1>
+                  <Title1>Ыңгайлуу дизайн</Title1>
                   <Text1>
-                     Adaptive test engine dynamically administers test questions
-                     <br /> from a database of hundreds of thousands of items.
-                     <br /> Someone would have to take the test more than 1,000
-                     times
-                     <br /> to see a question repeated.
+                     Адаптивдүү тестирлөө системасы динамикалык түрдө тест
+                     суроолорун берет.
                   </Text1>
                </motion.div>
                <StyledDesignIcon
