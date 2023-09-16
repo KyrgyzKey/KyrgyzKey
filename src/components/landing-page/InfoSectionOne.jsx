@@ -277,11 +277,7 @@ const InfoSectionOne = ({ count }) => {
          <InfoDivOne variants={animation}>
             <ImagePaperAirline>
                <ImagePaperAirline1 src={paperAirline} />
-               {/* <OptimizedImage
-                  src={paperAirline}
-                  blurhash="LEHV6nWB2yk8pyo0adR*.7kCMdnj"
-                  alt={paperAirline}
-               /> */}
+
                <ImageBorder src={borderFrame} />
                <BorderFrameImageOne>
                   <CountNumber>
@@ -298,7 +294,7 @@ const InfoSectionOne = ({ count }) => {
                   </CountNumber>
                </BorderFrameImageOne>
             </ImagePaperAirline>
-            <Text>Жылына 10.000ден ашык адамды тейлоого даяр</Text>
+            <Text>Жылына 10.000ден ашык адамды тейлөөгө даяр</Text>
          </InfoDivOne>
          <InfoDivSecond variants={animation}>
             <ImageGlobus variants={animation}>
@@ -316,7 +312,7 @@ const InfoSectionOne = ({ count }) => {
                   </CountNumber2>
                </BorderFrameImageTwo>
             </ImageGlobus>
-            <Text>24 саат бою тейлоого даяр</Text>
+            <Text>24 саат бою тейлөөгө даяр</Text>
          </InfoDivSecond>
          <InfoDivThird variants={animation}>
             <ImagePiggyBank variants={animation}>
@@ -335,7 +331,7 @@ const InfoSectionOne = ({ count }) => {
                   </CountNumber3>
                </BorderFrameImageThird>
             </ImagePiggyBank>
-            <Text>Катталгандан кийин 14 кун бекер</Text>
+            <Text>Катталгандан кийин 14 күн бекер</Text>
          </InfoDivThird>
       </InfoCard>
    )

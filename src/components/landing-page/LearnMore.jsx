@@ -1,4 +1,4 @@
-import { Grid, Typography, keyframes, styled } from '@mui/material'
+import { Box, Grid, Typography, keyframes, styled } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ReactComponent as Roadmap } from '../../assets/icons/roadmap.svg'
@@ -59,7 +59,7 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
                variants={textAnimation}
             >
-               <Title>Көбүрөөк билүү</Title>
+               <Title>KyrgyzKey аркылуу</Title>
             </TitleContainer>
             <StyledIcon />
             <Container
@@ -67,15 +67,17 @@ const LearnMore = () => {
                whileInView="visible"
                viewport={{ amount: 0.5 }}
             >
-               <motion.div variants={infoAnimation}>
-                  <Title1>Кыргыз тилинде эркин суйлонуз</Title1>
-                  <Text1>
-                     KyrgyzKey аркылуу кыргыз тилин уйронунуз
-                     <br />
-                     жана кыргыз маданияты менен таанышыныз
-                  </Text1>
-               </motion.div>
-
+               <BoxStyle>
+                  <motion.div variants={infoAnimation}>
+                     <Title1>Эркин суйлөөнү үйрөнөсүз</Title1>
+                     <Text1>
+                        Кыргыз тилинин жазылышын, айтылышын
+                        <br />
+                        жана сөз айкаштарын үйрөнөсүз
+                     </Text1>
+                  </motion.div>
+               </BoxStyle>
+               {/* маданияты менен таанышасыз */}
                <StyledGlobusIcon
                   variants={animation}
                   custom={0.7}
@@ -96,35 +98,34 @@ const LearnMore = () => {
                      marginLeft: '300px',
                   }}
                />
-               <motion.div
-                  style={{ overflow: 'hidden' }}
-                  variants={secondInfoAnimation}
-               >
-                  <Title2>
-                     Кыргыз тили кафедрасынын курамынын негизинде жасалган
-                  </Title2>
-                  <Text2>
-                     KyrgyzKey аркылуу кыргыз тилин үйрөнүү үчүн жана кыргыз
-                     маданиятын изилдөө үчүн
-                     <br />
-                     тестирлөө болот.
-                  </Text2>
-               </motion.div>
+               <BoxStyleSecond>
+                  <motion.div
+                     style={{ overflow: 'hidden' }}
+                     variants={secondInfoAnimation}
+                  >
+                     <Title2>Өз билимиңизди текшересиз</Title2>
+                     <Text2>
+                        KyrgyzKey ден жазылган тест аркылуу
+                        <br />
+                        өз билимиңизди текшерүүгө мүмкүнчүлүк бар
+                     </Text2>
+                  </motion.div>
+               </BoxStyleSecond>
             </Container1>
             <Container2
                initial="hidden"
                whileInView="visible"
                viewport={{ amount: 0.5 }}
             >
-               <motion.div variants={infoAnimation}>
-                  <Title1>Инновациялык тест коопсуздугу</Title1>
-                  <Text1>
-                     Компьютердик адаптивдик технология алдамчылыктын алдын
-                     алууга жардам берет жана
-                     <br />
-                     алдоо жана ишене ала турган натыйжаларды камсыз кылат.
-                  </Text1>
-               </motion.div>
+               <BoxThird>
+                  <motion.div variants={infoAnimation}>
+                     <Title1>Тарыхы</Title1>
+                     <Text1>
+                        Байыркы тилдин келип чыккан тарыхы боюнча маалымат
+                        аласыз
+                     </Text1>
+                  </motion.div>
+               </BoxThird>
                <StyledSecuryIcon
                   variants={animation}
                   custom={0.7}
@@ -144,29 +145,27 @@ const LearnMore = () => {
                      zIndex: 1,
                   }}
                />
-               <motion.div variants={secondInfoAnimation}>
-                  <Title2>Ыңгайлуу натыйжалар тактасы</Title2>
-                  <Text2>
-                     Талапкерлердин сертификаттарына, видео маектерине жана
-                     жазуу
-                     <br />
-                     үлгүлөрдү акысыз жана коопсуз башкаруу тактасы аркылуу
-                     <br /> колдонуучунун берүүчүнүн маалыматтарын оңой көрүү.
-                  </Text2>
-               </motion.div>
+               <BoxStyledFourth>
+                  <motion.div variants={secondInfoAnimation}>
+                     <Title2>Эффективдүү натыйжалар </Title2>
+                     <Text2>Сизден каало - бизден натыйжа</Text2>
+                  </motion.div>
+               </BoxStyledFourth>
             </Container3>
             <Container4
                initial="hidden"
                whileInView="visible"
                viewport={{ amount: 0.5 }}
             >
-               <motion.div variants={infoAnimation}>
-                  <Title1>Ыңгайлуу дизайн</Title1>
-                  <Text1>
-                     Адаптивдүү тестирлөө системасы динамикалык түрдө тест
-                     суроолорун берет.
-                  </Text1>
-               </motion.div>
+               <Box>
+                  <motion.div variants={infoAnimation}>
+                     <Title1>Ыңгайлуу дизайн</Title1>
+                     <Text1>
+                        Адаптивдүү тестирлөө системасы динамикалык түрдө тест
+                        суроолорун берет.
+                     </Text1>
+                  </motion.div>
+               </Box>
                <StyledDesignIcon
                   variants={animation}
                   custom={0.7}
@@ -250,7 +249,6 @@ const Text1 = styled(Typography)(() => ({
 }))
 
 const Title2 = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 600,
    fontSize: '24px',
@@ -310,4 +308,25 @@ const StyledButton = styled(motion(Grid))(() => ({
    marginTop: '139px',
    display: 'flex',
    justifyContent: 'center',
+}))
+
+const BoxStyle = styled(Box)(() => ({
+   display: 'flex',
+   justifyContent: 'center',
+   width: '55%',
+}))
+
+const BoxStyleSecond = styled(Box)(() => ({
+   display: 'flex',
+   justifyContent: 'flex-start',
+   width: '30%',
+}))
+
+const BoxThird = styled(Box)(() => ({
+   display: 'flex',
+}))
+
+const BoxStyledFourth = styled(Box)(() => ({
+   display: 'flex',
+   width: '40%',
 }))

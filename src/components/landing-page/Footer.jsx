@@ -14,7 +14,7 @@ import { ReactComponent as PlusIcon } from '../../assets/icons/plus.svg'
 
 const FAQ = [
    {
-      question: 'What is Bilingual?',
+      question: 'Эмне чн KyrgyzKey?',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, autem. Soluta at ut perferendis, debitis nisi quidem porro libero, impedit voluptatum expedita vero? Qui aspernatur officiis ut, rem doloribus id.',
    },
    {
@@ -40,7 +40,7 @@ const Footer = () => {
       <StyledFooter>
          <div>
             <div>
-               <StyledTitle>FAQ:</StyledTitle>
+               <StyledTitle>көп берилүүчү суроолор:</StyledTitle>
             </div>
             {FAQ.map((item) => (
                <MuiAccordion disableGutters key={item.question}>
