@@ -3,14 +3,15 @@ import React, { useState } from 'react'
 
 import Slider from 'react-slick'
 import avatar1 from '../../assets/images/markZuckerberg.jpg'
-import adil from '../../assets/images/adil.jpg'
-import aziat from '../../assets/images/aziat.jpeg'
 import elonMusk from '../../assets/images/elonMusk.jpg'
-import mairamgul from '../../assets/images/mairamgul.jpg'
 import jobs from '../../assets/images/steveJobs.jpg'
-import bezos from '../../assets/images/aibekBratan.jpeg'
-import timCook from '../../assets/images/aimon.jpg'
-import kaukhar from '../../assets/images/kaukhar2.jpg'
+import Avatar2 from '../../assets/images/Avatar2.jpg'
+import Avatar3 from '../../assets/images/Avatar3.jpg'
+import Avatar4 from '../../assets/images/Avatar4.jpg'
+import Avatar1 from '../../assets/images/Avatar1.jpg'
+import Анна from '../../assets/images/Анна.jpg'
+import NewImage from '../../assets/images/NewImage.jpg'
+
 import { ReactComponent as NextIcon } from '../../assets/icons/nextIcon.svg'
 import { ReactComponent as PrevIcon } from '../../assets/icons/prevIcon.svg'
 import { ReactComponent as Pagination } from '../../assets/icons/pagination.svg'
@@ -21,9 +22,9 @@ const humans = [
       id: 1,
       description:
          'KyrgyzKey - Кыргыз тилин үйрөнүү үчүн укмуштуу веб-сайт. Интерфейс колдонуучуга ыңгайлуу , мазмуну кызыктуу жана интерактивдүү',
-      name: 'Майрамгүл',
+      name: 'Betty Parker',
       rating: 5,
-      avatar: mairamgul,
+      avatar: Avatar2,
    },
    {
       id: 2,
@@ -37,17 +38,17 @@ const humans = [
       id: 3,
       description:
          'KyrgyzKeyдин жамааттык багыты абдан сонун. Мен башка кырыгз тилин үйрөнүп жаткандар жана кыргыз тилинде эркин сүйлөгөндөр менен байланыша алам, бул мага сүйлөө , жазуу жана машыгууга жардам берет.',
-      name: 'Аймона',
+      name: 'Charles Lloyd',
       rating: 5,
-      avatar: timCook,
+      avatar: Avatar4,
    },
    {
       id: 4,
       description:
          'KyrgyzKey кыргыз тилин үйрөнүүчүлөр үчүн булактардын чоң тандоосун сунуштайт. Грамматикалык көнүгүүлөрдөн лексика боюнча викториналарга чейин бардыгы бар.',
-      name: 'Адил',
+      name: 'Deanna Williams',
       rating: 5,
-      avatar: adil,
+      avatar: Avatar3,
    },
    {
       id: 5,
@@ -62,25 +63,25 @@ const humans = [
       id: 6,
       description:
          'Колдонмо ыңгайлуу жана колдонууга оңой. Мен басып баратып кыргыз тилин үйрөнө алам жана каалаган түзмөктөн ийгиликтеримди көрө алам.',
-      name: 'Азиат',
+      name: 'James Owen',
       rating: 5,
-      avatar: aziat,
+      avatar: Avatar1,
    },
    {
       id: 7,
       description:
          'KyrgyzKey менин көнүгүүлөрүм жана баалоолорум боюнча сонун пикирлерди берет. Бул мага жакшыртууга муктаж сапаттарымды аныктоого жардам берет жана убакыттын өтүшү менен ийгиликтеримди көзөмөлдөйт.',
-      name: 'Каухар',
+      name: 'Danielle Tate',
       rating: 5,
-      avatar: kaukhar,
+      avatar: Анна,
    },
    {
       id: 8,
       description:
          'KyrgyzKey деги окуу материалдарынын ар түрдүүлүгү мени шыктандырат . Мен эч качан машыгуудан тажабайм жана ар дайым кыйынчылыктарга даярмын.',
-      name: 'Алибек',
+      name: 'Zena Na Sobe',
       rating: 5,
-      avatar: bezos,
+      avatar: NewImage,
    },
    {
       id: 9,
