@@ -12,7 +12,7 @@ import tutoring from '../../assets/images/tutoring.png'
 // import bookImg from '../../assets/icons/bookImg.svg'
 // import learnImg from '../../assets/icons/learnImg.svg'
 // import readingImg from '../../assets/icons/reading.svg'
-import yourtaImg from '../../assets/images/education.jpg'
+import yourtaImg from '../../assets/images/edication.svg'
 
 import InfoSectionOne from './InfoSectionOne'
 import { OurTeams } from './OurTeams'
@@ -205,9 +205,9 @@ const DivTutoring = styled('div')(() => ({
 //    bottom: '14rem',
 // }))
 const ImgAnimation = styled('img')(() => ({
-   width: '50%',
-   height: '100%',
-   marginRight: '2rem',
+   width: '40rem',
+   height: '40rem',
+   // marginRight: '3rem',
 }))
 const DivSeparation = styled('div')(() => ({
    display: 'flex',
