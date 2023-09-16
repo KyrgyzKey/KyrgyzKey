@@ -1,6 +1,6 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-import { Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import styled from '@emotion/styled'
 import AimonVideo from '../../assets/videos/aimon.MP4'
 import AnarbekVideo from '../../assets/videos/anarbek.MP4'
@@ -12,14 +12,14 @@ import AdilVideo from '../../assets/videos/adil.MP4'
 import BekzatVideo from '../../assets/videos/bekzat.MP4'
 
 const partners = [
-   { id: '1', video: NiaraVideo },
-   { id: '2', video: AimonVideo },
-   { id: '3', video: AnarbekVideo },
-   { id: '4', video: EldanaVideo },
-   { id: '5', video: JypargulVideo },
-   { id: '6', video: KumaVideo },
-   { id: '7', video: AdilVideo },
-   { id: '8', video: BekzatVideo },
+   { id: '1', video: NiaraVideo, title: 'Niara' },
+   { id: '2', video: AimonVideo, title: 'Aimon' },
+   { id: '3', video: AnarbekVideo, title: 'Anarbek' },
+   { id: '4', video: EldanaVideo, title: 'Eldana' },
+   { id: '5', video: JypargulVideo, title: 'Jypargul' },
+   { id: '6', video: KumaVideo, title: 'Kutman' },
+   { id: '7', video: AdilVideo, title: 'Adil' },
+   { id: '8', video: BekzatVideo, title: 'Bekzat' },
 ]
 
 export const OurTeams = () => {
@@ -29,6 +29,9 @@ export const OurTeams = () => {
             {partners.map((item) => (
                <PartnersCard key={item.id}>
                   <StyledVideo src={item.video} autoPlay loop muted />
+                  <BoxStyle>
+                     <h3>{item.title}</h3>
+                  </BoxStyle>
                </PartnersCard>
             ))}
          </StyledPartners>
@@ -44,15 +47,14 @@ const StyledVideo = styled('video')(() => ({
 }))
 
 const PartnersCard = styled(Grid)(() => ({
-   width: '200px',
-   height: '220px',
-   background: '#ffffff',
-   border: '1px solid #e4e4e4',
+   width: '220px',
    borderRadius: '20px',
-   padding: '0px 0px',
+   padding: '0px',
    display: 'flex',
    justifyContent: 'center',
+   flexDirection: 'column',
    alignItems: 'center',
+   textAlign: 'center',
    margin: '0 20px',
 }))
 
@@ -60,4 +62,10 @@ const StyledPartners = styled(Grid)(() => ({
    display: 'flex',
    flexDirection: 'row',
    justifyContent: 'space-between',
+}))
+
+const BoxStyle = styled(Box)(() => ({
+   display: 'flex',
+   justifyContent: 'center',
+   background: 'transparent',
 }))

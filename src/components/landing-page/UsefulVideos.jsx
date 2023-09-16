@@ -13,22 +13,19 @@ const videos = [
       id: 1,
       poster,
       video: video1,
-      title: 'Test Overview',
-      duration: 'Duration 1:00',
+      title: 'Кыргыз тилин үйрөнүү кеңештери',
    },
    {
       id: 2,
       poster,
       video: video2,
-      title: 'Test Walkthrough',
-      duration: 'Duration 5:00',
+      title: 'Башталгычтар учун',
    },
    {
       id: 3,
       poster,
       video: video3,
-      title: 'Integrated Subscores',
-      duration: 'Duration 2:55',
+      title: 'Тилди үйрөнүү жолу',
    },
 ]
 
@@ -53,7 +50,7 @@ const UsefulVideos = () => {
       >
          <FirstSection>
             <TitleContainer variants={textAnimation}>
-               <Title> Useful videos </Title>
+               <Title> Пайдалуу маалыматтар </Title>
             </TitleContainer>
             <SecondSection>
                {videos.map((item) => {
@@ -77,7 +74,6 @@ const UsefulVideos = () => {
                         </StyledVideo>
 
                         <VideoTitle>{item.title}</VideoTitle>
-                        <VideoDuration>{item.duration}</VideoDuration>
                      </VideoContainer>
                   )
                })}
@@ -142,15 +138,4 @@ const VideoTitle = styled(Typography)(() => ({
    marginTop: '16px',
    marginLeft: '20px',
    marginBottom: '10px',
-}))
-
-const VideoDuration = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
-   fontStyle: 'normal',
-   fontWeight: 400,
-   fontSize: '18px',
-   lineHeight: '21px',
-   color: '#212629',
-   marginLeft: '20px',
-   marginBottom: '16px',
 }))
