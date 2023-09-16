@@ -61,21 +61,20 @@ const ButtonDiv = styled('div')(() => ({
 }))
 const ButtonToComeIn = styled(Button)(() => ({
    padding: '13px 24px',
-   fontSize: '14px',
-   fontFamily: 'Gilroy',
+   fontSize: '1rem',
+   letterSpacing: ' 0.2em',
+   fontFamily: 'Oswald',
    lineHeight: '16px',
-   letterSpacing: ' 0.02em',
 }))
 
 const RegisterBtn = styled(Button)(() => ({
    border: 'none',
-   fontSize: '14px',
+   fontSize: '1rem',
    background: '#ffffff',
    color: '#4C4C4C',
-   fontFamily: 'Gilroy',
+   letterSpacing: ' 0.02em',
    lineHeight: '16px',
    fontWeight: 400,
-   letterSpacing: ' 0.02em',
    boxShadow:
       '0px 1px 2px rgba(76, 72, 89, 0.2), 0px 1px 2px rgba(76, 72, 89, 0.2)',
    borderRadius: '8px',
@@ -117,10 +116,10 @@ const DivInfo = styled('div')(() => ({
    animation: `${slideInAnimation} 1s ease-in-out`,
 }))
 const Bilingual = styled('h1')(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
-   fontWeight: 900,
-   fontSize: '60px',
+   fontWeight: 600,
+   fontSize: '5rem',
    lineHeight: '74.88px',
    color: '#C93D7D',
    margin: '5px 0 0',
@@ -206,10 +205,10 @@ const LandingPageSectionOne = () => {
                {isAuthorized ? (
                   <>
                      <Button variant="contained" onClick={onLogOut}>
-                        Log out
+                        Чыгуу
                      </Button>
                      <Button variant="contained" onClick={goToTests}>
-                        Tests
+                        Тест
                      </Button>
                   </>
                ) : (
@@ -243,7 +242,6 @@ const LandingPageSectionOne = () => {
          </DivInfo>
 
          <ImgBubble src={imageBubble} loading="lazy" />
-
          <AcademicCap loading="lazy" src={cap} />
          <ImageBooks loading="lazy" src={imageBook} />
       </LandingPage>

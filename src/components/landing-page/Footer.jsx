@@ -6,7 +6,6 @@ import {
    styled,
 } from '@mui/material'
 import React from 'react'
-import { ReactComponent as Bilingual } from '../../assets/icons/footerLogo.svg'
 import { ReactComponent as YouTube } from '../../assets/icons/youTube.svg'
 import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg'
 import { ReactComponent as Instagram } from '../../assets/icons/instagram.svg'
@@ -14,24 +13,20 @@ import { ReactComponent as PlusIcon } from '../../assets/icons/plus.svg'
 
 const FAQ = [
    {
-      question: 'Эмне чн KyrgyzKey?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, autem. Soluta at ut perferendis, debitis nisi quidem porro libero, impedit voluptatum expedita vero? Qui aspernatur officiis ut, rem doloribus id.',
+      question: 'Эмне үчүн KyrgyzKey?',
+      text: 'Биздин платформа колдонуучулар учун ынгайлуу, жеткиликтуу жана сиздердин талаптарынызга ынгайлуу жаныланып турат',
    },
    {
-      question: 'How can I show what I am typing during the test?',
-      text: "Please take the test in a separate, quiet room. Close all other windows and close all other programs before starting the test.An external USB keyboard or mouse can be used during the test. However, when answering test questions, you should only type on one keyboard and use one mouse. Don't switch between multiple keyboards or mice.",
+      question: 'Проекттин негизги багыты эмнеде?',
+      text: 'Кыргыз тилин онуктуруу жана анын маданият тарыхын кененирээк жайылтуу.',
    },
    {
-      question: 'Why should I take the Bilingual English Test?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate alias, omnis incidunt nemo accusamus consequuntur illum, porro, quos corrupti voluptas consectetur. Quam voluptatum praesentium eos adipisci eum libero aliquid.',
+      question: 'Тест учурунда эмне учун микрофон керек?',
+      text: 'Биз кыргыз тилинин бир гана жазылышына эмес, айтылышына да маани беребиз. Ошондуктан микрофонду жандырып суйлоого туура келет',
    },
    {
-      question: 'How can I make sure my microphone picks up my voice clearly?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis expedita eius aperiam dolorum ipsum harum aut quis perspiciatis exercitationem in! Officia incidunt architecto rem exercitationem ducimus fugiat voluptatibus nobis voluptatum!',
-   },
-   {
-      question: "How can I allow a test to record my computer's screen?",
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda facere, esse voluptatibus excepturi labore delectus, cumque ipsa ex expedita soluta debitis consequatur sequi quas vero dicta perferendis, harum nemo.',
+      question: 'Тестти озум тузсом болобу?',
+      text: 'Жок, бир гана даяр суроолорго жооп бере аласыз. Бирок келе жаткан жанылоодо бул функцияны кошуп бере алабыз',
    },
 ]
 
@@ -55,9 +50,6 @@ const Footer = () => {
                </MuiAccordion>
             ))}
             <Logos>
-               <a href="#home" style={{ cursor: 'pointer' }}>
-                  <Bilingual />
-               </a>
                <SocialNetwork>
                   <a href="https://youtube.com/@Bilingua.education">
                      <YouTube />
@@ -72,7 +64,7 @@ const Footer = () => {
             </Logos>
             <Copyright>
                <Typography>
-                  © Copyright PeakSoft. All Rights Reserved
+                  © Copyright KyrgyzKey. All Rights Reserved
                </Typography>
             </Copyright>
          </div>
@@ -90,9 +82,9 @@ const StyledFooter = styled('footer')(() => ({
 }))
 
 const StyledTitle = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
-   fontStyle: 'normal',
+   fontFamily: 'Open Sans',
    fontWeight: 700,
+   letterSpacing: '3px',
    fontSize: '40px',
    lineHeight: '51px',
    borderBottom: '1px solid #4a4a4a',

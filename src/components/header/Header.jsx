@@ -33,22 +33,22 @@ const Header = ({ title, endpoint, resultEndpoint }) => {
    return (
       <>
          <ModalReusable isOpen={openModal} handleClose={handleCloseModal}>
-            <p>Are you sure you want to log out?</p>
+            <LogOutWarningText>Чыгууну каалайсызбы?</LogOutWarningText>
             <ButtonContainer>
                <Button variant="outlined" onClick={handleCloseModal}>
-                  Cancel
+                  Жок
                </Button>
                <Button variant="contained" onClick={onLogout}>
-                  Yes
+                  Ооба
                </Button>
             </ButtonContainer>
          </ModalReusable>
          <StyledHeader>
             <Logotype onClick={goToHomePage} />
             <Container>
-               <TestBtn to={endpoint}>TESTS</TestBtn>
-               <SubmitBtn to={resultEndpoint}>{title} RESULTS</SubmitBtn>
-               <LogOut onClick={handleOpenModal}>LOG OUT</LogOut>
+               <TestBtn to={endpoint}>Тест</TestBtn>
+               <SubmitBtn to={resultEndpoint}>{title} жыйынтыгы</SubmitBtn>
+               <LogOut onClick={handleOpenModal}>Чыгуу</LogOut>
             </Container>
          </StyledHeader>
       </>
@@ -79,13 +79,14 @@ const LogOut = styled(Button)(() => ({
       '0px 1px 2px rgba(76, 72, 89, 0.2), 0px 1px 2px rgba(76, 72, 89, 0.2)',
    borderRadius: '8px',
    background: 'none',
-   fontSize: '14px',
+   fontSize: '1rem',
    lineHeight: '16px',
    color: '#4C4C4C',
    padding: '13px 24px',
    fontWeight: 700,
    gap: '8px',
    marginLeft: '60px',
+   fontFamily: 'Oswald',
    ':hover': {
       background: '#3A10E5',
       color: '#fff',
@@ -120,4 +121,8 @@ const SubmitBtn = styled(NavLink)(() => ({
    cursor: 'pointer',
    textDecoration: 'none',
    '&.active': { color: '#3A10E5' },
+}))
+const LogOutWarningText = styled('h3')(() => ({
+   fontFamily: 'Open Sans',
+   fontWeight: 500,
 }))

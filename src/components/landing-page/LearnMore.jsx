@@ -77,7 +77,6 @@ const LearnMore = () => {
                      </Text1>
                   </motion.div>
                </BoxStyle>
-               {/* маданияты менен таанышасыз */}
                <StyledGlobusIcon
                   variants={animation}
                   custom={0.7}
@@ -159,10 +158,9 @@ const LearnMore = () => {
             >
                <Box>
                   <motion.div variants={infoAnimation}>
-                     <Title1>Ыңгайлуу дизайн</Title1>
+                     <Title1>Элдин маданияты</Title1>
                      <Text1>
-                        Адаптивдүү тестирлөө системасы динамикалык түрдө тест
-                        суроолорун берет.
+                        Кыргыз элини маданияты тууралуу маалымат ала аласыз
                      </Text1>
                   </motion.div>
                </Box>

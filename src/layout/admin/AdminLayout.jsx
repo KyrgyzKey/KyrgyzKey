@@ -5,7 +5,7 @@ const AdminLayout = () => {
    return (
       <>
          <Header
-            title="SUBMITTED"
+            title="Тесттин"
             endpoint="/admin/test"
             resultEndpoint="/admin/submit-result"
          />
