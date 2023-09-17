@@ -129,15 +129,15 @@ const DescribeImage = ({ title, duration, testId, setError }) => {
             />
          </SectionOne>
          <SectionTwo>
-            <CorrectAnswer> Correct answer</CorrectAnswer>
+            <CorrectAnswer> Туура жооп</CorrectAnswer>
             <StyledInput value={input} onChange={changeInputHandler} />
          </SectionTwo>
          <Buttons>
             <GoBack variant="outlined" onClick={goBackHandler}>
-               GO BACK
+               АРТКА КАЙТУУ
             </GoBack>
             <SaveButton type="submit" variant="contained">
-               Save
+               Сактоо
             </SaveButton>
          </Buttons>
       </Contain>

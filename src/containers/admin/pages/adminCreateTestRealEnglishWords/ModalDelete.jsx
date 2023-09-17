@@ -11,12 +11,12 @@ const ModalDelete = ({ isOpenModal, openModal, deleteFunction }) => {
          <StyledModal>
             <StyledIcon src={closeCross} onClick={openModal} />
             <RedCrossImage src={redCross} />
-            <Title>Do you want delete? </Title>
-            <Text>You can t restore this file </Text>
+            <Title>Өчүргүңүз келеби? </Title>
+            <Text>Бул файлды калыбына келтире албайсыз </Text>
             <Buttons>
-               <StyledButton onClick={openModal}>Cancel</StyledButton>
+               <StyledButton onClick={openModal}>Жабуу</StyledButton>
                <DeleteButton variant="contained" onClick={deleteFunction}>
-                  Delete
+                  Өчүрүү
                </DeleteButton>
             </Buttons>
          </StyledModal>

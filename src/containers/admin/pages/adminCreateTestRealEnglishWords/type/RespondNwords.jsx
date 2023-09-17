@@ -39,7 +39,7 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
          } else {
             setValidationErrors((prevErrors) => ({
                ...prevErrors,
-               [name]: 'Please enter a number between 1 and 200 for words.',
+               [name]: 'Сураныч  1ден 200гө чейинки санды жазыңыз.',
             }))
          }
       }
@@ -48,7 +48,7 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
          if (value.trim().length === 0) {
             setValidationErrors((prevErrors) => ({
                ...prevErrors,
-               [name]: 'Please enter a statement.',
+               [name]: 'Сураныч ырастоо киргизиңиз',
             }))
          } else {
             setValidationErrors((prevErrors) => ({
@@ -67,31 +67,27 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
       if (!title) {
          setError((prevState) => ({
             ...prevState,
-            title: 'Please title enter!',
+            title: 'Сураныч, аталышты киргизиңиз!',
          }))
       }
       if (!duration) {
          setError((prevState) => ({
             ...prevState,
-            duration: 'Enter time!',
+            duration: 'Убакытты киргизиңиз!',
          }))
       }
       if (formValues.statement.trim().length === 0) {
-         notify(
-            'error',
-            'Attention!',
-            'Please enter a statement before saving.'
-         )
-         throw new Error('Statement is required.')
+         notify('error', 'Сактоодон мурун билдирүү киргизиңиз.')
+         throw new Error('Сураныч ырастоо киргизиңиз')
       }
 
       if (Object.values(validationErrors).some((error) => error !== '')) {
          notify(
             'error',
-            'Attention!',
-            'Please fix the validation errors before saving.'
+            'Көңүл буруңуз!',
+            'Сактоодон мурун текшерүү каталарын оңдоңуз.'
          )
-         throw new Error('Validation errors.')
+         throw new Error('Текшерүү каталары.')
       }
 
       try {
@@ -109,20 +105,20 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
          if (state !== null) {
             await updateQuestionRequest(data)
             navigateGoBackTest()
-            notify('success', 'Question', 'Updated successfully!')
+            notify('success', 'Ийгиликтүү жаңыланды!')
          } else {
             await postRespondWords(data)
             navigateGoBackTest()
-            notify('success', 'New question', 'Posted successfully!')
+            notify('success', 'Ийгиликтүү жайгаштырылды!')
          }
       } catch (error) {
-         notify('error', 'Question', error.response?.data.message)
+         notify('error', error.response?.data.message)
       }
    }
 
    return (
       <div>
-         <LabelStyled>Question statement</LabelStyled>
+         <LabelStyled>Суроо билдирүүсү</LabelStyled>
          <InputForAnswer
             name="statement"
             value={formValues.statement}
@@ -130,8 +126,8 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
          />
          <ReplaysStyled>
             <LabelStyled>
-               Number off
-               <br /> Words
+               Номер өчүрүлдү
+               <br /> Сөздөр
             </LabelStyled>
             <InputStyled
                type="number"
@@ -142,10 +138,10 @@ const RespondNwords = ({ title, duration, testId, setError }) => {
          </ReplaysStyled>
          <ContainerBtn>
             <GoBackButton variant="outlined" onClick={navigateGoBackTest}>
-               Go back
+               Артка кайтуу
             </GoBackButton>
             <SaveButton variant="contained" onClick={submitHandler}>
-               Save
+               Сактоо
             </SaveButton>
          </ContainerBtn>
       </div>
