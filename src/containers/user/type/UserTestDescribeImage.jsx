@@ -45,7 +45,7 @@ const UserTestDescribeImage = ({ question, handleNextClick }) => {
       <DescribeImageDivv>
          <SecondDescribeImageDiv>
             <TextTitle>
-               Write one or more sentences that describe the image
+               Сүрөттү сүрөттөгөн бир же бир нече сүйлөм жазыңыз
             </TextTitle>
             <DivInputandImage>
                <ImageForTheTest urlImage={files.fileUrl} />
@@ -66,7 +66,7 @@ const UserTestDescribeImage = ({ question, handleNextClick }) => {
                style={{ padding: '12px 54px' }}
                disabled={testResponse.length === 0}
             >
-               NEXT
+               Кийинки
             </Button>
          </ContainerBtn>
       </DescribeImageDivv>

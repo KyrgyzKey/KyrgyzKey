@@ -62,25 +62,25 @@ const CurrentTest = () => {
                         <ListStyle>
                            <ListItem>
                               <Online />
-                              <span>See what the test is like *</span>
+                              <span>Тест эмнеден тураарын байкаңыз *</span>
                            </ListItem>
                            <ListItem>
                               <Time />
                               <span>
-                                 Practice takes just{' '}
-                                 {(item.duration / 60).toFixed(0)} minutes
+                                 Практика {(item.duration / 60).toFixed(0)}{' '}
+                                 мүнөт ээледи
                               </span>
                            </ListItem>
                            <ListItem>
                               <Photo />
-                              <span>Get an unofficial score estimate</span>
+                              <span>Расмий эмес упай рейтингин алыңыз</span>
                            </ListItem>
                         </ListStyle>
                      </ContentContainer>
 
                      <InfoStyle>
-                        * The practice test may include question types that may
-                        not appear on the certified test.
+                        * Практикалык тест сертификатталган тестте жок болгон
+                        суроолорду камтышы мүмкүн
                      </InfoStyle>
 
                      <ContainerBtn>
@@ -88,22 +88,20 @@ const CurrentTest = () => {
                            variant="outlined"
                            onClick={() => navigate('/user/tests')}
                         >
-                           Cancel
+                           Баш тартуу
                         </CancelButton>
                         <Button
                            variant="contained"
                            onClick={() => tryTestHandle(item.questions)}
                         >
-                           Practice Test
+                           Практикалык Тест
                         </Button>
                      </ContainerBtn>
                   </StyledForm>
                )
             })
          ) : (
-            <Typography>
-               Sorry, there are no tests available at the moment.
-            </Typography>
+            <Typography>Тилекке каршы, учурда тесттер жок.</Typography>
          )}
       </FormContainer>
    )

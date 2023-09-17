@@ -3,28 +3,28 @@ import { questionTypes } from './common'
 
 export const signUpInputArray = [
    {
-      name: 'firstName',
-      label: 'First name',
+      name: 'Атыныз',
+      label: 'Атыныз',
       type: 'text',
    },
    {
-      name: 'lastName',
-      label: 'Last name',
+      name: 'Фамилия',
+      label: 'Фамилия',
       type: 'text',
    },
    {
       name: 'email',
-      label: 'Email',
+      label: 'Почтаныз',
       type: 'email',
    },
    {
       name: 'password',
-      label: 'Password',
+      label: 'Сыр сөз',
       type: 'password',
    },
    {
       name: 'confirmPassword',
-      label: 'Confirm Password',
+      label: 'Сыр сөздү ырастаңыз',
       type: 'password',
    },
 ]
@@ -101,7 +101,7 @@ export const signUpValidation = Yup.object().shape({
 })
 
 export const signInValidation = Yup.object().shape({
-   email: Yup.string().email().required('Сырсөз талап кылынат'),
+   email: Yup.string().email().required('Электрондук почта талап кылынат'),
 
    password: Yup.string()
       .matches(

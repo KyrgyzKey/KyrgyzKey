@@ -35,7 +35,7 @@ const Footer = () => {
       <StyledFooter>
          <div>
             <div>
-               <StyledTitle>көп берилүүчү суроолор:</StyledTitle>
+               <StyledTitle>Көп берилүүчү суроолор:</StyledTitle>
             </div>
             {FAQ.map((item) => (
                <MuiAccordion disableGutters key={item.question}>
@@ -45,7 +45,9 @@ const Footer = () => {
                      <Question>{item.question}</Question>
                   </MuiAccordionSummary>
                   <MuiAccordionDetails>
-                     <Typography>{item.text}</Typography>
+                     <Typography style={{ fontFamily: 'Oswald' }}>
+                        {item.text}
+                     </Typography>
                   </MuiAccordionDetails>
                </MuiAccordion>
             ))}
@@ -79,10 +81,11 @@ const StyledFooter = styled('footer')(() => ({
    color: '#fff',
    padding: '60px 110px 12px',
    margin: '120px 0 0 0',
+   fontFamily: 'Oswald',
 }))
 
 const StyledTitle = styled(Typography)(() => ({
-   fontFamily: 'Open Sans',
+   fontFamily: 'Oswald',
    fontWeight: 700,
    letterSpacing: '3px',
    fontSize: '40px',
@@ -92,6 +95,7 @@ const StyledTitle = styled(Typography)(() => ({
 }))
 
 const MuiAccordion = styled(Accordion)(() => ({
+   fontFamily: 'Oswald',
    backgroundColor: '#262626',
    color: '#fff',
    borderBottom: '1px solid #4a4a4a',
@@ -101,6 +105,7 @@ const MuiAccordion = styled(Accordion)(() => ({
 }))
 
 const MuiAccordionSummary = styled(AccordionSummary)(() => ({
+   fontFamily: 'Oswald',
    padding: '0',
    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
       transform: 'rotate(45deg)',
@@ -112,8 +117,7 @@ const MuiAccordionDetails = styled(AccordionDetails)({
 })
 
 const Question = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
-   fontStyle: 'normal',
+   fontFamily: 'Oswald',
    fontWeight: 600,
    fontSize: '20px',
    lineHeight: '40px',

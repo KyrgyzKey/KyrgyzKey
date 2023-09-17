@@ -33,7 +33,7 @@ const SelectEnglishWords = ({ question, handleNextClick }) => {
                style={{ padding: '12px 54px' }}
                disabled={words.length === 0}
             >
-               NEXT
+               Кийинки
             </Button>
          </ContainerBtn>
       </>

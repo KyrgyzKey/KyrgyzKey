@@ -27,7 +27,7 @@ const ListenAndSelect = ({ question, handleNextClick }) => {
 
          <AudioContainer>
             {question !== null && question.options.length === 0 ? (
-               <p style={{ margin: '0 auto' }}>Empty</p>
+               <p style={{ margin: '0 auto' }}>Бош</p>
             ) : (
                question.options.map((item, i) => (
                   <MultiplySelect
@@ -48,7 +48,7 @@ const ListenAndSelect = ({ question, handleNextClick }) => {
                variant="contained"
                disabled={audio.length === 0}
             >
-               Next
+               Кийинки
             </NextBtn>
          </BtnContainer>
       </Container>

@@ -47,7 +47,7 @@ const RespondNWords = ({ question, handleNextClick }) => {
                   maxRows={6}
                   placeholder={`Your response (min words: ${question.minWords})`}
                />
-               <Word wordColor={disabledBtn}>Word: {word.length - 1}</Word>
+               <Word wordColor={disabledBtn}>Сөз: {word.length - 1}</Word>
             </ResponseContainer>
          </Container>
          <BtnContainer>
@@ -56,7 +56,7 @@ const RespondNWords = ({ question, handleNextClick }) => {
                disabled={disabledBtn}
                onClick={nextHandler}
             >
-               Next
+               Кийинки
             </NextBtn>
          </BtnContainer>
       </>

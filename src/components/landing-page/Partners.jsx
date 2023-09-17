@@ -37,7 +37,8 @@ const Partners = () => {
 export default Partners
 
 const PartnersTitle = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
+   letterSpacing: '1px',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',

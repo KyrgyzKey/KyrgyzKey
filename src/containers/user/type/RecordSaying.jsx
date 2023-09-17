@@ -82,7 +82,7 @@ const RecordSaying = ({ question, handleNextClick }) => {
                   variant="contained"
                   onClick={nextButtonHandler}
                >
-                  NEXT
+                  Кийинки
                </Button>
             </div>
          </SecondContainer>
