@@ -33,15 +33,15 @@ const CheckHighLightTheAnswer = ({ question, answerId, score }) => {
    return (
       <>
          <TextContainer>
-            <StyledText>Passage:</StyledText>
+            <StyledText>Өтүү:</StyledText>
             <StyledSpan>{question.questionResponse.passage}</StyledSpan>
          </TextContainer>
          <TextContainer>
-            <StyledText>Question Statement:</StyledText>
+            <StyledText>Суроо билдирүүсү:</StyledText>
             <StyledSpan>{question.questionResponse.statement}</StyledSpan>
          </TextContainer>
          <TextContainer>
-            <StyledText>Correct answer:</StyledText>
+            <StyledText>Туура жооп:</StyledText>
             <CorrectAnswerText>
                {question.questionResponse.correctAnswer}
             </CorrectAnswerText>
@@ -49,9 +49,9 @@ const CheckHighLightTheAnswer = ({ question, answerId, score }) => {
 
          {question.userAnswerResponse.map((item) => (
             <Fragment key={item.answerId}>
-               <StyledText>User&#39;s answer</StyledText>
+               <StyledText>&#39;Колдонуучунун жообу</StyledText>
                <TextContainer>
-                  <StyledText>Respond:</StyledText>
+                  <StyledText>Жооп берүү:</StyledText>
                   <StyledSpan>{item.data}</StyledSpan>
                </TextContainer>
             </Fragment>
@@ -59,10 +59,10 @@ const CheckHighLightTheAnswer = ({ question, answerId, score }) => {
 
          <ButtonContainer>
             <GoBackButton variant="outlined" onClick={goBackHandler}>
-               Go back
+               Артка кайтуу
             </GoBackButton>
             <SaveButton color="success" variant="contained" onClick={saveScore}>
-               Save
+               Сактоо
             </SaveButton>
          </ButtonContainer>
       </>

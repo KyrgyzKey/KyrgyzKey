@@ -49,19 +49,19 @@ const DescribeImageSubmitTest = ({ question, answerId, score }) => {
       try {
          await postEveluatingScore(data)
          goBack()
-         return notify('success', 'Question', 'Ийгиликтүү кошулду')
+         return notify('success', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Бир жерден ката кетти')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
    return question.userAnswerResponse.map((item) => (
       <div style={{ width: '100%', height: '330px', marginTop: '40px' }}>
          <DivPlayAudioButtonAndCorrectAnswer>
             <TestImage url={files.fileUrl} />
-            <CorrectAnswer>Correct answer:Hello world!!!!</CorrectAnswer>
+            <CorrectAnswer>Туура жооп:Салам дүйнө!!!!</CorrectAnswer>
          </DivPlayAudioButtonAndCorrectAnswer>
          <InfoDiv>
             <div
@@ -74,16 +74,18 @@ const DescribeImageSubmitTest = ({ question, answerId, score }) => {
                   fontWeight: 500,
                }}
             >
-               User’s Answer
+               &#39;Колдонуучунун жообу
             </div>
-            <EnteredStatement>Entered Statement: {item.data}</EnteredStatement>
+            <EnteredStatement>
+               Киргизилген билдирүү: {item.data}
+            </EnteredStatement>
          </InfoDiv>
          <DivButtonSaveandGoBack>
             <Button sx={buttonStyleGoBack} onClick={goBack}>
-               go Back
+               Артка кайтуу
             </Button>
             <Button sx={buttonSave} onClick={saveScore}>
-               Save
+               Сактоо
             </Button>
          </DivButtonSaveandGoBack>
       </div>

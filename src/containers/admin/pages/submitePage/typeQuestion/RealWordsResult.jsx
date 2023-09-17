@@ -51,12 +51,12 @@ const RealWordsResult = ({ question, score, answerId }) => {
       try {
          await postEveluatingScore(data)
          goBack()
-         return notify('success', 'Question', 'Ийгиликтүү кошулду')
+         return notify('success', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Бир жерден ката кетти')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
 
