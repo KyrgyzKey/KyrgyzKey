@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Button, styled } from '@mui/material'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 import { signOut } from '../../redux/auth/auth.thunk'
 import ModalReusable from '../UI/modal/Modal'
 
@@ -44,7 +43,12 @@ const Header = ({ title, endpoint, resultEndpoint }) => {
             </ButtonContainer>
          </ModalReusable>
          <StyledHeader>
-            <Logotype onClick={goToHomePage} />
+            <KyrgyzKey onClick={goToHomePage}>
+               Kyrgyz
+               <span style={{ color: '#fff', WebkitTextStroke: '1px black' }}>
+                  Key
+               </span>
+            </KyrgyzKey>
             <Container>
                <TestBtn to={endpoint}>Тест</TestBtn>
                <SubmitBtn to={resultEndpoint}>{title} жыйынтыгы</SubmitBtn>
@@ -69,9 +73,9 @@ const StyledHeader = styled('header')(() => ({
    background: '#ffffff',
 }))
 
-const Logotype = styled(Logo)(() => ({
-   cursor: 'pointer',
-}))
+// const Logotype = styled(Logo)(() => ({
+//    cursor: 'pointer',
+// }))
 
 const LogOut = styled(Button)(() => ({
    border: '2px solid #4C4859',
@@ -125,4 +129,15 @@ const SubmitBtn = styled(NavLink)(() => ({
 const LogOutWarningText = styled('h3')(() => ({
    fontFamily: 'Open Sans',
    fontWeight: 500,
+}))
+
+const KyrgyzKey = styled('h1')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '5rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   margin: '5px 0 0',
+   textTransform: 'uppercase',
 }))

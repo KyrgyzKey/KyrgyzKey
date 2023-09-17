@@ -64,6 +64,11 @@ const CreateTest = () => {
                   onChange={handleChange}
                   value={values.title}
                   name="title"
+                  sx={{
+                     '& input': {
+                        fontFamily: 'Oswald',
+                     },
+                  }}
                />
                <Error>{errors.title}</Error>
             </Content>
@@ -74,6 +79,11 @@ const CreateTest = () => {
                   onChange={handleChange}
                   value={values.shortDescription}
                   name="shortDescription"
+                  sx={{
+                     '& input': {
+                        fontFamily: 'Oswald',
+                     },
+                  }}
                />
                <Error>{errors.shortDescription}</Error>
             </Content>
@@ -94,12 +104,14 @@ export default CreateTest
 
 const Error = styled(Typography)(() => ({
    color: '#f00',
+   fontFamily: 'Oswald',
+   fontWeight: 700,
 }))
 
 const CreateTestForm = styled('form')(() => ({}))
 
 const Label = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: '500',
    fontSize: '16px',
@@ -110,6 +122,7 @@ const Label = styled(Typography)(() => ({
 
 const Content = styled(Grid)(() => ({
    marginBottom: 28,
+   fontFamily: 'Oswald',
 }))
 
 const ButtonContainer = styled(Grid)(() => ({

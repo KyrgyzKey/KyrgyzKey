@@ -64,7 +64,13 @@ const MyResults = () => {
          <FormContainer>
             <StyledTable>
                <TableHead>
-                  <TableRow>
+                  <TableRow
+                     style={{
+                        display: 'flex',
+                        gap: '11rem',
+                        fontFamily: 'Oswald',
+                     }}
+                  >
                      <StyledTh> # </StyledTh>
                      <StyledTh> Берилген күнү </StyledTh>
                      <StyledTh> Тесттин аталышы </StyledTh>
@@ -128,6 +134,11 @@ export default MyResults
 const StyledTable = styled(Table)(() => ({
    borderSpacing: '0 20px',
    borderCollapse: 'separate',
+   fontFamily: 'Oswald',
+   display: 'flex',
+   flexDirection: 'column',
+   gap: '3rem',
+   alignItems: 'center',
 }))
 
 const StyledTr = styled(TableRow)(() => ({
@@ -155,9 +166,10 @@ const StyledTd = styled(TableCell)(() => ({
 }))
 
 const StyledTh = styled(TableCell)(() => ({
+   fontFamily: 'Oswald',
    textAlign: 'start',
    fontStyle: 'normal',
-   fontWeight: '500',
+   fontWeight: 500,
    fontSize: '16px',
    linHeight: '18px',
    color: '#4C4859',
@@ -167,8 +179,8 @@ const StyledTh = styled(TableCell)(() => ({
 const Text = styled(Typography)(() => ({
    marginTop: '60px',
    fontSize: '20px',
-   marginRight: '-600px',
-   marginLeft: '18.50rem',
+   margin: '0 auto',
+   // marginLeft: '18.50rem',
    color: '#f00',
 }))
 const SpinnerContainer = styled(Grid)(() => ({

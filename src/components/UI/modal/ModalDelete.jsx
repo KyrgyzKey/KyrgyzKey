@@ -7,6 +7,7 @@ const style = {
    borderRadius: '20px',
    borderStyle: 'none',
    alignItems: 'center',
+   fontFamily: 'Oswald',
 }
 
 const ModalDelete = ({ isOpenModal, openModal, deleteFunction, idListen }) => {
@@ -32,6 +33,7 @@ const ModalDelete = ({ isOpenModal, openModal, deleteFunction, idListen }) => {
 }
 export default ModalDelete
 const StyledModal = styled('div')(() => ({
+   fontFamily: 'Oswald',
    position: 'absolute',
    top: '45%',
    left: '50%',
@@ -58,11 +60,12 @@ const RedCrossImage = styled('img')(() => ({
    marginLeft: '227px',
 }))
 const Title = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
+   fontWeight: 500,
    marginTop: '51px',
    marginLeft: '170px',
    marginBottom: '7px',
-   fontSize: '20px',
+   fontSize: '25px',
    lineHeight: '23px',
    display: 'flex',
    alignItems: 'center',
@@ -70,12 +73,13 @@ const Title = styled(Typography)(() => ({
    color: '#4C4859',
 }))
 const Text = styled(Typography)(() => ({
+   fontFamily: 'Oswald',
+   fontWeight: 500,
    fontStyle: 'normal',
-   fontWeight: 400,
    fontSize: '16px',
    lineHeight: '18px',
    color: '#4C4859',
-   marginLeft: '105px',
+   marginLeft: '125px',
    marginBottom: '48px',
 }))
 const Buttons = styled('div')(() => ({
@@ -90,8 +94,10 @@ const StyledButton = styled(Button)(() => ({
    marginRight: '16px',
    height: '42px',
    width: '98px',
+   fontFamily: 'Oswald',
 }))
 const DeleteButton = styled(Button)(() => ({
    width: '98px',
    height: '42px',
+   fontFamily: 'Oswald',
 }))

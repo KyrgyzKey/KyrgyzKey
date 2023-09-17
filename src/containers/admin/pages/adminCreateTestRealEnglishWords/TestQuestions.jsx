@@ -51,6 +51,7 @@ const menuItemStyle = {
    alignItems: 'start',
    width: '100%',
    height: '42px',
+   fontFamily: 'Oswald',
 }
 
 const TestQuestions = () => {
@@ -164,6 +165,7 @@ const TestQuestions = () => {
                   error={!!errorObject.select}
                   displayEmpty
                   defaultValue={state?.question.questionType}
+                  sx={{ fontFamily: 'Oswald' }}
                >
                   <MenuItem value="" disabled>
                      Тестти түрүн тандаңыз

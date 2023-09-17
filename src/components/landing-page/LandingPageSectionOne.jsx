@@ -180,6 +180,32 @@ const KyrgyzKeyLandingPage = styled('div')(() => ({
    marginBottom: '2.5rem',
 }))
 
+const styleButton = {
+   padding: '13px 24px',
+   fontSize: '1rem',
+   letterSpacing: '0.2em',
+   fontFamily: 'Oswald',
+   lineHeight: '16px',
+}
+
+const styleButton2 = {
+   border: 'none',
+   fontSize: '1rem',
+   background: '#ffffff',
+   color: '#4C4C4C',
+   letterSpacing: ' 0.02em',
+   lineHeight: '16px',
+   fontWeight: 400,
+   boxShadow:
+      '0px 1px 2px rgba(76, 72, 89, 0.2), 0px 1px 2px rgba(76, 72, 89, 0.2)',
+   borderRadius: '8px',
+   ':hover': {
+      background: '#F0EDED',
+      color: '#4C4C4C',
+      border: 'none',
+   },
+}
+
 const LandingPageSectionOne = () => {
    const dispatch = useDispatch()
    const { isAuthorized } = useSelector((state) => state.auth)
@@ -237,10 +263,18 @@ const LandingPageSectionOne = () => {
             <ButtonDiv>
                {isAuthorized ? (
                   <>
-                     <Button variant="contained" onClick={onLogOut}>
+                     <Button
+                        sx={styleButton}
+                        variant="contained"
+                        onClick={onLogOut}
+                     >
                         Чыгуу
                      </Button>
-                     <Button variant="contained" onClick={goToTests}>
+                     <Button
+                        sx={styleButton2}
+                        variant="contained"
+                        onClick={goToTests}
+                     >
                         Тест
                      </Button>
                   </>

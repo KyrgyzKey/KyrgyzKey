@@ -2,7 +2,6 @@ import { Grid, Typography, styled } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { ReactComponent as Icon } from '../../assets/icons/group32.svg'
-import { ReactComponent as Logo } from '../../assets/icons/layeruser 2.svg'
 import Button from '../../components/UI/buttons/Buttons'
 import FormContainer from '../../components/UI/form/FormContainer'
 import { submitTestRequest } from '../../api/testService'
@@ -38,7 +37,12 @@ const CompleteTest = () => {
             <Title>Тест жыйынтыкталды</Title>
             <Icon />
          </Container>
-         <StyledIcon />
+         <KyrgyzKey>
+            Kyrgyz
+            <span style={{ color: '#fff', WebkitTextStroke: '1px black' }}>
+               Key
+            </span>
+         </KyrgyzKey>
          <Text>
             Сиздин жыйынтыктарыңыз баалоо үчүн жөнөтүлдү. <br />
             Баа коюлгандан кийин жыйынтыгы электрондук почтага жөнөтүлөт.
@@ -66,19 +70,15 @@ const Title = styled(Typography)(() => ({
    fontWeight: 400,
    fontSize: '28px',
    lineHeight: '32px',
-   textTransform: 'capitalize',
+   textTransform: 'uppercase',
    color: '#4C4859',
 }))
-const StyledIcon = styled(Logo)(() => ({
-   marginTop: '52px',
-   marginBottom: '26px',
-   marginLeft: '46.11%',
-   maarginRight: '46%',
-}))
+
 const Text = styled(Typography)(() => ({
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
-   fontWeight: 400,
-   fontSize: '18px',
+   fontWeight: 600,
+   fontSize: '1.125rem',
    lineHeight: '130%',
    textAlign: 'center',
    color: '#4C4859',
@@ -101,4 +101,18 @@ const ButtonTryAgain = styled(Button)(() => ({
    height: '42px',
    border: '2px solid #3A10E5',
    borderRadius: '8px',
+   fontFamily: 'Oswald',
+   fontSize: '0.9rem',
+   fontWeight: 700,
+}))
+
+const KyrgyzKey = styled('h1')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '3rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   margin: '0 auto',
+   textTransform: 'uppercase',
 }))

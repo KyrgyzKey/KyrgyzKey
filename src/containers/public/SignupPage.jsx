@@ -150,10 +150,10 @@ const SignupPage = () => {
                      />
                   )
                })}
-               {/* <Error>{CheckEmail}</Error>
-               <Error> {CheckPassword}</Error> */}
+               {/* <Error> {CheckPassword}</Error> */}
                <Error>{touched.firstName && errors.firstName}</Error>
                <Error>{touched.lastName && errors.lastName}</Error>
+               <Error>{touched.email && errors.email}</Error>
                <Error>{touched.password && errors.password}</Error>
                <Error>{error}</Error>
                <Error>{CheckConfirmPassword}</Error>
@@ -192,6 +192,7 @@ const Error = styled('p')(() => ({
    margin: '0 0 10px 0',
    color: '#f00',
    textAlign: 'center',
+   fontFamily: 'Oswald',
 }))
 
 const Background = styled(Grid)(() => ({
@@ -237,6 +238,13 @@ const Title = styled(Typography)(() => ({
 const StyledInput = styled(Input)(() => ({
    height: '52px',
    marginBottom: '20px',
+   fontFamily: 'Oswald',
+   '& input': {
+      fontFamily: 'Oswald',
+   },
+   '& label': {
+      fontFamily: 'Oswald',
+   },
 }))
 
 const StyledButton = styled(Button)(() => ({
@@ -244,21 +252,11 @@ const StyledButton = styled(Button)(() => ({
    marginTop: '10px',
    letterSpacing: '0.0625rem',
 }))
-// const ButtonContainer = styled(Button)(() => ({
-//    margin: '34px auto 0',
-//    border: ' 1px solid #BDBDBD',
-//    boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.2)',
-//    borderRadius: '8px',
-//    padding: '10px 10px',
-//    color: '#757575',
-// }))
-// const GoogleIcon = styled(Google)(() => ({
-//    margin: '0 8px 0 0',
-// }))
+
 const StyledText = styled(Typography)(() => ({
    textAlign: 'center',
    marginTop: '24px',
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: '500',
    fontSize: '14px',

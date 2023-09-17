@@ -230,6 +230,12 @@ const StyledInput = styled(Input)(() => ({
    fontWeight: 300,
    height: '52px',
    marginBottom: '20px',
+   '& input': {
+      fontFamily: 'Oswald',
+   },
+   '& label': {
+      fontFamily: 'Oswald',
+   },
 }))
 const CheckboxContain = styled(Grid)(() => ({
    display: 'flex',

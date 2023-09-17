@@ -80,6 +80,7 @@ const AdminTest = () => {
                   styled={{ fontFamily: 'Oswald' }}
                   variant="contained"
                   onClick={createTestHandler}
+                  sx={{ fontFamily: 'Oswald ' }}
                >
                   + Жаңы сыноо кошуу
                </Button>
@@ -96,17 +97,14 @@ const AdminTest = () => {
                      <TitleContainer onClick={() => navigate(`${item.id}`)}>
                         <TestTitle>{item.title}</TestTitle>
                      </TitleContainer>
-
                      <IconsContainer>
                         <Switcher
                            checked={item.isActive}
                            onClick={() => updateIsActive(item)}
                         />
-
                         <MyIconButton onClick={() => goToUpdateTest(item)}>
                            <StyledEditIcon />
                         </MyIconButton>
-
                         <MyIconButton onClick={() => openModalHandler(item.id)}>
                            <StyledDeleteIcon />
                         </MyIconButton>
@@ -147,9 +145,9 @@ const TitleContainer = styled(Grid)(() => ({
 }))
 
 const TestTitle = styled('p')(({ theme }) => ({
-   fontFamily: 'Poppins, Gilroy',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
-   fontWeight: '400',
+   fontWeight: 600,
    fontSize: '16px',
    lineHeight: '18px',
    color: theme.palette.primary.fontColor,
