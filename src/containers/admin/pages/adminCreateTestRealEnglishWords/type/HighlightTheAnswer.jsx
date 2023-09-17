@@ -54,18 +54,18 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
       if (statement === '' && passage === '') {
          setWarningInputPassage((prevState) => ({
             ...prevState,
-            questionsToThePassage: 'Please write a question!',
-            passage: 'Please write an answer to your question!',
+            questionsToThePassage: 'Сураныч, суроо жазыңыз!',
+            passage: 'Сурооңузга жооп жазыңыз!',
          }))
       } else if (passage === '') {
          setWarningInputPassage((prevState) => ({
             ...prevState,
-            passage: 'passage write',
+            passage: 'үзүндү жазуу',
          }))
       } else if (selectedText === '') {
          setWarningInputPassage((prevState) => ({
             ...prevState,
-            correctAnswer: 'Highlight correct answer!',
+            correctAnswer: 'Туура жоопту белгиле!',
          }))
       } else {
          try {
@@ -85,11 +85,11 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
             if (state !== null) {
                await updateQuestionRequest(data)
                goBackFunction()
-               notify('success', 'Question', 'Succesfully updated')
+               notify('success', 'Question', 'Ийгиликтүү жаңыртылды')
             } else {
                await postHighlightTheAnswer(data)
                goBackFunction()
-               return notify('success', 'Question', 'Succesfully added')
+               return notify('success', 'Question', 'Ийгиликтүү кошулду')
             }
          } catch (error) {
             return notify('error', 'Question', error.response?.data.message)
@@ -106,7 +106,7 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
       <>
          <QuestionsToThePassageDiv>
             <LabelQuestion htmlFor="questionsToThePassage">
-               Questions to the Passage
+               Өтүү үчүн суроолор
             </LabelQuestion>
             <InputQuestion
                type="text"
@@ -119,7 +119,7 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
             <Warning>{warningInputPassage.questionsToThePassage}</Warning>
          )}
          <PassageDiv>
-            <LabelPassage htmlFor="passageLabel">Passage</LabelPassage>
+            <LabelPassage htmlFor="passageLabel">Өтүү</LabelPassage>
             <TextAreaPassage
                id="passageLabel"
                value={passage}
@@ -133,7 +133,7 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
             {passage && (
                <>
                   <HighlightCorrectAnswerLabel>
-                     Highlight correct answer :
+                     Туура жоопту белгилеңиз:
                   </HighlightCorrectAnswerLabel>
                   <DivCorrectAnswer
                      ref={divRef}
@@ -148,8 +148,8 @@ const HighlightTheAnswer = ({ title, duration, testId, setError }) => {
             )}
          </HighlightCorrectAnswerDiv>
          <ButtonContainer>
-            <GoBackButton onClick={goBackFunction}>Go back</GoBackButton>
-            <SaveButton onClick={saveHandler}>Save</SaveButton>
+            <GoBackButton onClick={goBackFunction}>Артка кайтуу</GoBackButton>
+            <SaveButton onClick={saveHandler}>Сактоо</SaveButton>
          </ButtonContainer>
       </>
    )

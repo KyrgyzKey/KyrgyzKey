@@ -63,63 +63,66 @@ export const typeTestArray = [
       id: Math.random(),
    },
    {
-      type: 'Select best title',
+      type: 'Мыкты аталышты танда',
       id: Math.random(),
    },
 ]
 
 export const signUpValidation = Yup.object().shape({
    firstName: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
+      .min(2, 'Өтө кыска!')
+      .max(50, 'Өтө узун!')
       .matches(
          /^.*((?=.*[A-Z]){1}).*$/,
-         'First name must contain one uppercase'
+
+         'Аты бир баш тамгадан турушу керек'
       )
-      .required('Firstname is required'),
+      .required('Аты талап кылынат'),
 
    lastName: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .matches(/^.*((?=.*[A-Z]){1}).*$/, 'Last name must contain one uppercase')
-      .required('Lastname is required'),
+      .min(2, 'Өтө кыска!')
+      .max(50, 'Өтө узун!')
+      .matches(/^.*((?=.*[A-Z]){1}).*$/, 'Фамилияда бир баш тамга болушу керек')
+      .required('Фамилия керек'),
 
-   email: Yup.string().email().required('Email is required'),
+   email: Yup.string().email().required('Сырсөз талап кылынат'),
 
    password: Yup.string()
       .matches(
          /^.*(?=.{8,})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-         'Password must contain at least 8 characters, one uppercase, one number'
+
+         'Сырсөз кеминде 8 белгиден, бир чоң тамгадан, бир сандан турушу керек'
       )
-      .required('Password is required')
-      .min(8, 'Password is too short - should be 8 chars minimum'),
+      .required('Сырсөз талап кылынат')
+      .min(8, 'Сырсөз өтө кыска - кеминде 8 белгиден болушу керек'),
    confirmPassword: Yup.string()
-      .required('Password is required')
-      .oneOf([Yup.ref('password')], 'Your password do not match'),
+      .required('Сырсөз талап кылынат')
+      .oneOf([Yup.ref('password')], 'Сиздин сырсөзүңүз дал келбейт'),
 })
 
 export const signInValidation = Yup.object().shape({
-   email: Yup.string().email().required('Email is required'),
+   email: Yup.string().email().required('Сырсөз талап кылынат'),
 
    password: Yup.string()
       .matches(
          /^.*(?=.{8,})(?=.*\d)((?=.*[a-z]){1}).*$/,
-         'Password must contain at least 8 characters, one uppercase and one number'
+
+         'Сырсөз кеминде 8 белгиден, бир чоң тамгадан жана бир сандан турушу керек'
       )
-      .required('Password is required')
-      .min(8, 'Password is too short - should be 8 chars minimum'),
+      .required('Сырсөз талап кылынат')
+      .min(8, 'Сырсөз өтө кыска - кеминде 8 белгиден болушу керек'),
 })
 
 export const createTestValidation = Yup.object().shape({
    title: Yup.string()
-      .min(5, 'the length should be from 5 to 70')
-      .max(70, 'the length should be from 5 to 70')
+      .min(5, 'узундугу 5тен 70ге чейин болушу керек')
+      .max(70, 'узундугу 5тен 70ге чейин болушу керек')
       .required('Required field')
       .trim(),
    shortDescription: Yup.string()
-      .min(5, 'the length should be from 5 to 70')
-      .max(70, 'the length should be from 5 to 70')
-      .required('Required field')
+      .min(5, 'узундугу 5тен 70ге чейин болушу керек')
+      .max(70, 'узундугу 5тен 70ге чейин болушу керек')
+      .required('Талап кылынган талаа')
       .trim(),
    isActive: Yup.boolean(),
 })

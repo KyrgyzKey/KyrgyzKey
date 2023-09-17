@@ -23,13 +23,13 @@ const RecordSayingStatement = ({ title, duration, testId, setError }) => {
       if (!title) {
          setError((prevState) => ({
             ...prevState,
-            title: 'Please title enter!',
+            title: 'Сураныч, аталышты киргизиңиз!',
          }))
       }
       if (!duration) {
          setError((prevState) => ({
             ...prevState,
-            duration: 'Enter time!',
+            duration: 'Убакытты киргизиңиз!',
          }))
       }
       try {
@@ -47,14 +47,14 @@ const RecordSayingStatement = ({ title, duration, testId, setError }) => {
          if (state !== null) {
             await updateQuestionRequest(data)
             goBack()
-            notify('success', 'Question', 'Successfully updated')
+            notify('success', 'Ийгиликтүү жаңыртылды')
          } else {
             await postRecordSayingStatement(data)
             goBack()
-            notify('success', 'Question', 'Successfully added')
+            notify('success', 'Ийгиликтүү кошулду')
          }
       } catch (error) {
-         notify('error', 'Question', error.response?.data.message)
+         notify('error', error.response?.data.message)
       }
    }
 
@@ -64,18 +64,18 @@ const RecordSayingStatement = ({ title, duration, testId, setError }) => {
 
    return (
       <>
-         <Label>Statement</Label>
+         <Label>Билдирме</Label>
          <StyledInput value={statement} onChange={changeStatementHandler} />
          <ButtonContainer>
             <GoBackButton variant="outlined" onClick={goBack}>
-               Go back
+               Артка кайтуу
             </GoBackButton>
             <SaveButton
                variant="contained"
                onClick={submitHandler}
                disabled={!statement}
             >
-               Save
+               Сактоо
             </SaveButton>
          </ButtonContainer>
       </>

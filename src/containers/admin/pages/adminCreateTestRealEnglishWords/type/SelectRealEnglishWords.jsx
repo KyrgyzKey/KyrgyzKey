@@ -97,33 +97,33 @@ const SelectRealEnglishWords = ({ title, duration, testId, setError }) => {
          if (!title) {
             return setError((prevState) => ({
                ...prevState,
-               title: 'Please title enter!',
+               title: 'Сураныч, аталышты киргизиңиз!',
             }))
          }
          if (!duration) {
             return setError((prevState) => ({
                ...prevState,
-               duration: 'Enter time!',
+               duration: 'Убакытты киргизиңиз!',
             }))
          }
          if (options.length === 0) {
-            return notify('error', 'Failed', 'options should not be empty')
+            return notify('error', 'параметрлер бош болбошу керек')
          }
          if (state !== null) {
             await updateQuestionRequest(data)
             goBack()
-            notify('success', 'Question', 'Successfully updated')
+            notify('success', 'Ийгиликтүү жаңыртылды')
          } else {
             await postSelectRealEnglishWord(data)
             goBack()
-            notify('success', 'Question', 'Successfully added')
+            notify('success', 'Ийгиликтүү кошулду')
          }
          return dispatch(questionActions.clearOptions())
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
 
@@ -142,7 +142,7 @@ const SelectRealEnglishWords = ({ title, duration, testId, setError }) => {
          <QuestionModal isOpen={isOpenModalSave} onClose={openModalSave} />
          <CreateTest>
             <Button sx={buttonStyle} type="submit" onClick={openModalSave}>
-               + Add Options
+               + Тандоо кошуңуз
             </Button>
             <TestSelectRealEnglishWordsLine>
                {options.map((elem, i) => (
@@ -157,10 +157,10 @@ const SelectRealEnglishWords = ({ title, duration, testId, setError }) => {
             </TestSelectRealEnglishWordsLine>
             <DivButtonSaveandGoBack>
                <Button sx={buttonStyleGoBack} onClick={navigateGoBackTest}>
-                  go Back
+                  Артка кайтуу
                </Button>
                <Button sx={buttonSave} onClick={saveTest}>
-                  Save
+                  Сактоо
                </Button>
             </DivButtonSaveandGoBack>
          </CreateTest>

@@ -85,11 +85,11 @@ const SubmittedResults = () => {
                   <TableHead>
                      <TableRow>
                         <StyledTh> # </StyledTh>
-                        <StyledTh> User Name </StyledTh>
-                        <StyledTh> Date of Submition </StyledTh>
-                        <StyledTh> Test name </StyledTh>
-                        <StyledTh> Status </StyledTh>
-                        <StyledTh> Score </StyledTh>
+                        <StyledTh> Колдонуучунун аты </StyledTh>
+                        <StyledTh>Тапшыруу датасы </StyledTh>
+                        <StyledTh> Сыноонун аталышы </StyledTh>
+                        <StyledTh> Статусу </StyledTh>
+                        <StyledTh> Упай </StyledTh>
                      </TableRow>
                   </TableHead>
                   <TableBody>
@@ -156,7 +156,7 @@ const SubmittedResults = () => {
                            )
                         })
                      ) : (
-                        <Text>Извините ничего не найдено</Text>
+                        <Text>Кечиресиз эч нерсе табылган жок!</Text>
                      )}
                   </TableBody>
                </StyledTable>

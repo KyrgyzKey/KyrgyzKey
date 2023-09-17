@@ -54,12 +54,12 @@ const TypeWhatYouHearSubmitTest = ({ question, answerId, score }) => {
       try {
          await postEveluatingScore(data)
          goBack()
-         return notify('success', 'Question', 'Successfully added')
+         return notify('success', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
    const soundPlaybackAndStop = (files) => {
@@ -93,16 +93,16 @@ const TypeWhatYouHearSubmitTest = ({ question, answerId, score }) => {
                {playAudio ? (
                   <>
                      <StyledPlay />
-                     STOP RECORDED AUDIO
+                     АУДИОНУ ТОКТОТУУ
                   </>
                ) : (
                   <>
-                     <StyledPause /> PLAY AUDIO
+                     <StyledPause /> АУДИОНУ ИШТЕТҮҮ
                   </>
                )}
             </StyledButton>
             <CorrectAnswer>
-               Correct answer: {question.questionResponse.correctAnswer}
+               Туура жооп: {question.questionResponse.correctAnswer}
             </CorrectAnswer>
          </DivPlayAudioButtonAndCorrectAnswer>
          <InfoDiv>

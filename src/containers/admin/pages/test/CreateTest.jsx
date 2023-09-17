@@ -58,7 +58,7 @@ const CreateTest = () => {
       <FormContainer>
          <CreateTestForm onSubmit={handleSubmit}>
             <Content>
-               <Label>Title</Label>
+               <Label>Aталышы</Label>
                <Input
                   fullWidth
                   onChange={handleChange}
@@ -68,7 +68,7 @@ const CreateTest = () => {
                <Error>{errors.title}</Error>
             </Content>
             <Content>
-               <Label>Short Description</Label>
+               <Label>Кыскача мүнөздөмө</Label>
                <Input
                   fullWidth
                   onChange={handleChange}
@@ -79,10 +79,10 @@ const CreateTest = () => {
             </Content>
             <ButtonContainer>
                <GoBackButton variant="outlined" onClick={goBackHandler}>
-                  Go back
+                  Артка кайтуу
                </GoBackButton>
                <SaveButton color="success" variant="contained" type="submit">
-                  Save
+                  Сактоо
                </SaveButton>
             </ButtonContainer>
          </CreateTestForm>
