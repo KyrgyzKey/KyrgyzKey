@@ -91,9 +91,9 @@ const TestQuestions = () => {
       if (title === '' && duration === '' && selectType === '') {
          setError((prevState) => ({
             ...prevState,
-            title: 'Please title enter!',
-            duration: 'Enter time!',
-            select: 'Please select the type of test!',
+            title: 'Аталышын киргизиңиз!',
+            duration: 'Убакытты киргизиңиз!',
+            select: 'Сураныч, тесттин түрүн тандаңыз!',
          }))
       } else {
          setError((prevState) => ({
@@ -116,7 +116,7 @@ const TestQuestions = () => {
                      marginTop: '18px',
                   }}
                >
-                  <TextTitle>Title</TextTitle>
+                  <TextTitle>Аталышы</TextTitle>
                   <InputOne
                      style={
                         errorObject.title
@@ -132,7 +132,7 @@ const TestQuestions = () => {
                </div>
                <DivTimerInput>
                   <TimeText htmlFor="timeInput">
-                     Duration <br /> (in seconds)
+                     Узактыгы <br /> (in seconds)
                   </TimeText>
                   <InputNewTime
                      style={
@@ -155,7 +155,7 @@ const TestQuestions = () => {
             </DivInputOne>
             <DivInputSecond>
                <InputLabelTextType id="demo-simple-select-helper-label">
-                  Type
+                  Суроонун түрү
                </InputLabelTextType>
                <SelectType
                   name="select"
@@ -166,7 +166,7 @@ const TestQuestions = () => {
                   defaultValue={state?.question.questionType}
                >
                   <MenuItem value="" disabled>
-                     Select type test
+                     Тестти түрүн тандаңыз
                   </MenuItem>
                   {typeTestArray.map((type) => (
                      <MenuItem

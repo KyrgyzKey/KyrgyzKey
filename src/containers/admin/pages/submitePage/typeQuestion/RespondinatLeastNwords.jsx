@@ -20,12 +20,12 @@ const RespondinatLeastNwords = ({ question, answerId, score }) => {
       try {
          await postEveluatingScore(data)
          goBack()
-         return notify('success', 'Question', 'Successfully added')
+         return notify('success', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
 
@@ -33,14 +33,14 @@ const RespondinatLeastNwords = ({ question, answerId, score }) => {
       <>
          {question.userAnswerResponse.map((item) => (
             <>
-               <Text1>User&lsquo;s Answer </Text1>
+               <Text1>Колдонуучунун жообу</Text1>
                <Text2>
-                  Respond: <StyledSpan>{item.data}</StyledSpan>{' '}
+                  Жооп берүү: <StyledSpan>{item.data}</StyledSpan>{' '}
                </Text2>
-               <Text2>Number of words: {item.data.split(' ').length}</Text2>
+               <Text2>Сөздөрдүн саны: {item.data.split(' ').length}</Text2>
                <SecondContainer>
-                  <GoBackButton onClick={goBack}>GO BACK</GoBackButton>
-                  <SaveButton onClick={saveScore}>SAVE</SaveButton>
+                  <GoBackButton onClick={goBack}>АРТКА КАЙТУУ</GoBackButton>
+                  <SaveButton onClick={saveScore}>САКТОО</SaveButton>
                </SecondContainer>
             </>
          ))}

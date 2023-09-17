@@ -76,15 +76,19 @@ const AdminTest = () => {
          />
          <FormContainer>
             <ButtonContainer>
-               <Button variant="contained" onClick={createTestHandler}>
-                  + Add new Test
+               <Button
+                  styled={{ fontFamily: 'Oswald' }}
+                  variant="contained"
+                  onClick={createTestHandler}
+               >
+                  + Жаңы сыноо кошуу
                </Button>
             </ButtonContainer>
 
             {isLoading && <Spinner />}
             {!isLoading && tests !== null && tests.length === 0 ? (
                <Typography sx={{ textAlign: 'center' }}>
-                  Test list is empty
+                  Сынактын тизмеси бош
                </Typography>
             ) : (
                tests.map((item) => (

@@ -93,14 +93,14 @@ const AddQuestions = () => {
                <Grid>
                   <TestInfo>
                      <StyledTypography>
-                        Title: <StyledSpan>{test.title}</StyledSpan>
+                        Аталышы: <StyledSpan>{test.title}</StyledSpan>
                      </StyledTypography>
                      <StyledTypography>
-                        Short Description:
+                        Кыскача мүнөздөмө:
                         <StyledSpan> {test.shortDescription}</StyledSpan>
                      </StyledTypography>
                      <StyledTypography>
-                        Duration:
+                        Узактыгы:
                         <StyledSpan> {formatTime(test.duration)}</StyledSpan>
                      </StyledTypography>
                   </TestInfo>
@@ -109,23 +109,23 @@ const AddQuestions = () => {
                         variant="contained"
                         onClick={() => navigate(`createtest`)}
                      >
-                        + Add more questions
+                        + Көбүрөөк суроо кошуу
                      </Button>
                   </ButtonContainer>
 
                   <Hr />
 
                   {test.questions !== null && test.questions.length === 0 ? (
-                     <Typography>Question list is empty</Typography>
+                     <Typography>Суроолор тизмеси бош</Typography>
                   ) : (
                      <div style={{ overflowX: 'auto', padding: '10px' }}>
                         <StyledTable>
                            <TableHead>
                               <TableRow>
                                  <StyledTh>#</StyledTh>
-                                 <StyledTh>Name</StyledTh>
-                                 <StyledTh>Duration</StyledTh>
-                                 <StyledTh>Question type</StyledTh>
+                                 <StyledTh>Аты</StyledTh>
+                                 <StyledTh>Узактыгы</StyledTh>
+                                 <StyledTh>Суроонун түрү</StyledTh>
                                  <StyledTh />
                               </TableRow>
                            </TableHead>
@@ -168,7 +168,7 @@ const AddQuestions = () => {
                                     </StyledTr>
                                  ))
                               ) : (
-                                 <p>Question is empty</p>
+                                 <p>Суроо бош</p>
                               )}
                            </TableBody>
                         </StyledTable>
@@ -176,7 +176,7 @@ const AddQuestions = () => {
                   )}
                   <ButtonContainer>
                      <GoBackButton onClick={() => navigate('/admin/test')}>
-                        Go back
+                        Артка кайтуу
                      </GoBackButton>
                   </ButtonContainer>
                </Grid>

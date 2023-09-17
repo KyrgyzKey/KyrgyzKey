@@ -41,7 +41,7 @@ const EveluatingResults = () => {
          setResults(data)
          setIsLoading(false)
       } catch (error) {
-         notify('error', 'Result', 'Something went wrong')
+         notify('error', 'Бир жерден ката кетти')
          setIsLoading(false)
       }
    }
@@ -72,9 +72,9 @@ const EveluatingResults = () => {
          await instanse.post(
             `api/sendEmail/${resultId}?link=http://localhost:3000/user/my-result`
          )
-         notify('success', 'Email', 'Successfully sent')
+         notify('success', 'Ийгиликтүү жөнөтүлдү')
       } catch (error) {
-         notify('error', 'Failed', error.response.data.message)
+         notify('error', error.response.data.message)
       }
    }
 
@@ -85,14 +85,15 @@ const EveluatingResults = () => {
                <TestInfo>
                   <Grid>
                      <StyledTypography>
-                        User: <StyledSpan>{results?.userFullName}</StyledSpan>
+                        Колдонуучу:{' '}
+                        <StyledSpan>{results?.userFullName}</StyledSpan>
                      </StyledTypography>
                      <StyledTypography>
-                        Test:
+                        Сыноо:
                         <StyledSpan> {results?.testTitle}</StyledSpan>
                      </StyledTypography>
                      <StyledTypography>
-                        Date of Submission:{' '}
+                        Тапшыруу датасы:{' '}
                         <StyledSpan>
                            {renderDate(results?.dateOfSubmission)}
                         </StyledSpan>
@@ -100,11 +101,11 @@ const EveluatingResults = () => {
                   </Grid>
                   <ButtonContainer>
                      <StyledTypography>
-                        Final score:{' '}
+                        Жыйынтыктоочу упай:{' '}
                         <StyledSpan>{results?.finalScore.toFixed()}</StyledSpan>
                      </StyledTypography>
                      <StyledTypography>
-                        Final status:{' '}
+                        Акыркы абалы:{' '}
                         <StyledSpan
                            sx={{
                               color:
@@ -142,9 +143,9 @@ const EveluatingResults = () => {
                      <TableHead>
                         <TableRow>
                            <StyledTh> # </StyledTh>
-                           <StyledTh> Question </StyledTh>
-                           <StyledTh> Score </StyledTh>
-                           <StyledTh> Status </StyledTh>
+                           <StyledTh>Суроо </StyledTh>
+                           <StyledTh> Упай </StyledTh>
+                           <StyledTh> Статус </StyledTh>
                         </TableRow>
                      </TableHead>
                      <TableBody>
@@ -195,7 +196,7 @@ const EveluatingResults = () => {
                               )
                            })
                         ) : (
-                           <Text>Извините ничего не найдено</Text>
+                           <Text>Кечиресиз эч нерсе табылган жок!</Text>
                         )}
                      </TableBody>
                   </StyledTable>

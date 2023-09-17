@@ -49,12 +49,12 @@ const DescribeImageSubmitTest = ({ question, answerId, score }) => {
       try {
          await postEveluatingScore(data)
          goBack()
-         return notify('success', 'Question', 'Successfully added')
+         return notify('success', 'Question', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
             return notify('error', 'Question', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Question', 'Бир жерден ката кетти')
       }
    }
    return question.userAnswerResponse.map((item) => (

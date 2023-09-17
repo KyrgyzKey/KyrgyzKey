@@ -65,38 +65,38 @@ const SelectBestTitle = ({ title, duration, testId, setError }) => {
       }
       try {
          if (!passageInput) {
-            return notify('error', 'Question', 'Please enter passage')
+            return notify('error', 'Үзүндү киргизиңиз')
          }
          if (!title) {
             return setError((prevState) => ({
                ...prevState,
-               title: 'Please title enter!',
+               title: 'Сураныч, аталышты киргизиңиз!',
             }))
          }
          if (!duration) {
             return setError((prevState) => ({
                ...prevState,
-               duration: 'Enter time!',
+               duration: 'Убакытты киргизиңиз!',
             }))
          }
          if (options.length === 0) {
-            return notify('error', 'Failed', 'options should not be empty')
+            return notify('error', 'параметрлер бош болбошу керек')
          }
          if (state !== null) {
             await updateQuestionRequest(data)
             goBack()
-            notify('success', 'Question', 'Successfully updated')
+            notify('success', 'Ийгиликтүү жаңыртылды')
          } else {
             await postSelectBestTitle(data)
             goBack()
-            notify('success', 'Question', 'Successfully added')
+            notify('success', 'Ийгиликтүү кошулду')
          }
          return dispatch(questionActions.clearOptions())
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
 
@@ -111,7 +111,7 @@ const SelectBestTitle = ({ title, duration, testId, setError }) => {
          <QuestionModal isOpen={openModal} onClose={closeModalHandler} />
          <Container>
             <Passage>
-               <PassageLabel htmlFor="title">Passage</PassageLabel>
+               <PassageLabel htmlFor="title">Өтүү</PassageLabel>
                <TextArea
                   id="title"
                   rows={7}
@@ -121,13 +121,13 @@ const SelectBestTitle = ({ title, duration, testId, setError }) => {
             </Passage>
             <ButtonContainer>
                <AddOptionsButton onClick={openModalHandler}>
-                  + Add options
+                  + Тандоо кошуңуз
                </AddOptionsButton>
             </ButtonContainer>
             <OptionsContainer>
                {options.length === 0 ? (
                   <StyledTypography onClick={openModalHandler}>
-                     Please add options!
+                     Сураныч тандоо кошуңуз
                   </StyledTypography>
                ) : (
                   options.map((item, i) => (
@@ -150,9 +150,9 @@ const SelectBestTitle = ({ title, duration, testId, setError }) => {
                )}
             </OptionsContainer>
             <ButtonContainer>
-               <GoBackButton onClick={goBack}>go back</GoBackButton>
+               <GoBackButton onClick={goBack}>Артка кайтуу</GoBackButton>
                <SaveButton onClick={submitHandler} disabled={disabledBtn}>
-                  Save
+                  Сактоо
                </SaveButton>
             </ButtonContainer>
          </Container>

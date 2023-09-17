@@ -22,12 +22,12 @@ const CheckHighLightTheAnswer = ({ question, answerId, score }) => {
       try {
          await postEveluatingScore(data)
          goBackHandler()
-         return notify('success', 'Question', 'Successfully added')
+         return notify('success', 'Ийгиликтүү кошулду')
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
    return (

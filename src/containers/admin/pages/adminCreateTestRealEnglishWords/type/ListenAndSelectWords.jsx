@@ -74,18 +74,18 @@ const ListenWords = ({ title, duration, testId, setError }) => {
       if (titleListen === '' && audioName === '') {
          setValidationObject((prevState) => ({
             ...prevState,
-            titleInputWarning: 'Please add a title!',
+            titleInputWarning: 'Сураныч, аталыш кошуңуз!',
             fileURLValue: 'Please',
          }))
       } else if (titleListen === '') {
          setValidationObject((prevState) => ({
             ...prevState,
-            titleInputWarning: 'Please add a title!',
+            titleInputWarning: 'Сураныч, аталыш кошуңуз!',
          }))
       } else if (audioName === '') {
          setValidationObject((prevState) => ({
             ...prevState,
-            fileURLValue: 'Please',
+            fileURLValue: 'Сураныч',
          }))
       } else {
          const data = {
@@ -141,7 +141,7 @@ const ListenWords = ({ title, duration, testId, setError }) => {
       if (!valueInput) {
          setValidationObject((prevState) => ({
             ...prevState,
-            titleInputWarning: 'Please add a title!',
+            titleInputWarning: 'Сураныч, аталыш кошуңуз!',
          }))
       }
    }
@@ -179,33 +179,33 @@ const ListenWords = ({ title, duration, testId, setError }) => {
          if (!title) {
             return setError((prevState) => ({
                ...prevState,
-               title: 'Please title enter!',
+               title: 'Сураныч, аталышты киргизиңиз!',
             }))
          }
          if (!duration) {
             return setError((prevState) => ({
                ...prevState,
-               duration: 'Enter time!',
+               duration: 'Убакытты киргизиңиз!',
             }))
          }
          if (options.length === 0) {
-            return notify('error', 'Failed', 'options should not be empty')
+            return notify('error', 'Параметрлер бош болбошу керек')
          }
          if (state !== null) {
             await updateQuestionRequest(data)
             goBack()
-            notify('success', 'Question', 'Successfully updated')
+            notify('success', 'Ийгиликтүү жаңыртылды')
          } else {
             await postListenSelectRealEnglishWord(data)
             goBack()
-            notify('success', 'Question', 'Successfully added')
+            notify('success', 'Ийгиликтүү кошулду')
          }
          return dispatch(questionActions.clearOptions())
       } catch (error) {
          if (AxiosError(error)) {
-            return notify('error', 'Question', error.response?.data.message)
+            return notify('error', error.response?.data.message)
          }
-         return notify('error', 'Question', 'Something went wrong')
+         return notify('error', 'Бир жерден ката кетти')
       }
    }
 
@@ -232,7 +232,7 @@ const ListenWords = ({ title, duration, testId, setError }) => {
             idListen={idListen}
          />
          <Button sx={buttonStyle} type="submit" onClick={openModalSave}>
-            + Add Options
+            + Параметрлерди кошуу
          </Button>
          <TestListenAndSelectEnglishWords options={options}>
             {options.map((elem, i) => (
@@ -247,10 +247,10 @@ const ListenWords = ({ title, duration, testId, setError }) => {
          </TestListenAndSelectEnglishWords>
          <DivButtonSaveandGoBack>
             <Button sx={buttonStyleGoBack} onClick={goBack}>
-               go Back
+               Артка кайтуу
             </Button>
             <Button sx={buttonSave} onClick={saveTest}>
-               Save
+               Сактоо
             </Button>
          </DivButtonSaveandGoBack>
       </>

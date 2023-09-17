@@ -15,15 +15,15 @@ const ModalDelete = ({ isOpenModal, openModal, deleteFunction, idListen }) => {
          <StyledModal>
             <StyledIcon src={closeCross} onClick={openModal} />
             <RedCrossImage src={redCross} />
-            <Title>Do you want delete? </Title>
-            <Text>You can t restore this file </Text>
+            <Title>Өчүргүңүз келеби?</Title>
+            <Text>Бул файлды калыбына келтире албайсыз</Text>
             <Buttons>
-               <StyledButton onClick={openModal}>Cancel</StyledButton>
+               <StyledButton onClick={openModal}>Жабуу</StyledButton>
                <DeleteButton
                   variant="contained"
                   onClick={() => deleteFunction(idListen)}
                >
-                  Delete
+                  Өчүрүү
                </DeleteButton>
             </Buttons>
          </StyledModal>
@@ -75,7 +75,7 @@ const Text = styled(Typography)(() => ({
    fontSize: '16px',
    lineHeight: '18px',
    color: '#4C4859',
-   marginLeft: '165px',
+   marginLeft: '105px',
    marginBottom: '48px',
 }))
 const Buttons = styled('div')(() => ({

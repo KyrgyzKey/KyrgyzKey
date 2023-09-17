@@ -26,26 +26,26 @@ const SubmiteQuestions = () => {
       <FormContainer>
          <div>
             <StyledText>
-               User: <StyledSpan>{state.userFullName}</StyledSpan>
+               Колдонуучу: <StyledSpan>{state.userFullName}</StyledSpan>
             </StyledText>
             <StyledText>
-               Test: <StyledSpan>{state.testName}</StyledSpan>
+               Сынак: <StyledSpan>{state.testName}</StyledSpan>
             </StyledText>
          </div>
 
          <UserInfo>
             <div>
-               <h4 style={{ margin: '0 0 14px 0' }}>Test question</h4>
+               <h4 style={{ margin: '0 0 14px 0' }}>Сынактын суроосу</h4>
                <StyledText>
-                  Question Title:{' '}
+                  Суроонун аталышы:{' '}
                   <StyledSpan>{state.questionResponse.title}</StyledSpan>
                </StyledText>
                <StyledText>
-                  Duration:{' '}
+                  Узактыгы{' '}
                   <StyledSpan>{state.questionResponse.duration}</StyledSpan>
                </StyledText>
                <StyledText>
-                  Question Type:{' '}
+                  Суроо түрү:{' '}
                   <StyledSpan>
                      {questionName(state.questionResponse.questionType)}
                   </StyledSpan>
@@ -59,20 +59,20 @@ const SubmiteQuestions = () => {
                {state.questionResponse.questionType ===
                'RECORD_SAYING_STATEMENT' ? (
                   <StyledText>
-                     Statement:{' '}
+                     Билдирме:{' '}
                      <StyledSpan>{state.questionResponse.statement}</StyledSpan>
                   </StyledText>
                ) : null}
                {state.questionResponse.questionType === 'RESPOND_N_WORDS' ? (
                   <>
                      <StyledText>
-                        Mimimum number of words:{' '}
+                        Сөздөрдүн минималдуу саны:{' '}
                         <StyledSpan>
                            {state.questionResponse.minWords}
                         </StyledSpan>
                      </StyledText>
                      <StyledText>
-                        Question Statement:{' '}
+                        Суроо билдирүүсү:{' '}
                         <StyledSpan>
                            {state.questionResponse.statement}
                         </StyledSpan>
@@ -81,16 +81,16 @@ const SubmiteQuestions = () => {
                ) : null}
             </div>
             <div style={{ width: '120px' }}>
-               <h4 style={{ margin: 0 }}>Evaluation</h4>
+               <h4 style={{ margin: 0 }}>Баалоо</h4>
                {state.questionResponse.questionType ===
                   'LISTEN_AND_SELECT_ENGLISH_WORD' ||
                state.questionResponse.questionType === 'SELECT_ENGLISH_WORD' ? (
                   <StyledText>
-                     Score: <Score>{state.evaluationScore.toFixed()}</Score>
+                     Упай: <Score>{state.evaluationScore.toFixed()}</Score>
                   </StyledText>
                ) : (
                   <>
-                     <StyledScoreText>Score:(0-10)</StyledScoreText>
+                     <StyledScoreText>Упай:(0-10)</StyledScoreText>
                      <StyledInput
                         error={!!scoreError}
                         value={score}
