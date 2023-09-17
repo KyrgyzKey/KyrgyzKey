@@ -72,7 +72,9 @@ const SigninPage = () => {
    const submitHandler = (values) => {
       dispatch(signIn(values))
          .unwrap()
-         .then(() => notify('Ийгиликтүү кирдиниз!'))
+         .then(() =>
+            notify('success', 'Authentication', 'Successfully sign in')
+         )
          .then(() => navigate('/user/tests'))
          .catch(() => notify('error', 'Authentication', 'Failed to sign in'))
    }
