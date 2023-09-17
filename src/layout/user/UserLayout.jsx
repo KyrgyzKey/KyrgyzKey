@@ -16,7 +16,6 @@ const UserLayout = () => {
                resultEndpoint="/user/my-result"
             />
          )}
-         {/* <Header title="MY" endpoint="/user/tests" /> */}
          <BackgroundContainer>
             <Outlet />
          </BackgroundContainer>

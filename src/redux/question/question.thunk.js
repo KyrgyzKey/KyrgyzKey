@@ -18,7 +18,7 @@ export const getAllQuestions = createAsyncThunk(
          if (AxiosError(error)) {
             return rejectWithValue(error.response?.data.message)
          }
-         return rejectWithValue('Something went wrong')
+         return rejectWithValue('Бир нерсе туура эмес кетти')
       }
    }
 )
@@ -33,7 +33,7 @@ export const deleteQuestion = createAsyncThunk(
          if (AxiosError(error)) {
             return rejectWithValue(error.response?.data.message)
          }
-         return rejectWithValue('Something went wrong')
+         return rejectWithValue('Бир нерсе туура эмес кетти')
       }
    }
 )
@@ -50,7 +50,7 @@ export const postFiles = createAsyncThunk(
          if (AxiosError(error)) {
             return rejectWithValue(error.response?.data.message)
          }
-         return rejectWithValue('Error')
+         return rejectWithValue('Ката')
       }
    }
 )

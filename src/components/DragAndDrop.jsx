@@ -54,7 +54,7 @@ const DragAndDrop = ({ data, words }) => {
             onDrop={(e) => dropHandler(e)}
          >
             {words.length === 0 ? (
-               <span>Select and drag words here</span>
+               <span>Сөздөрдү тандап, сүйрөңүз</span>
             ) : (
                words.map((item) => (
                   <WordsContainer

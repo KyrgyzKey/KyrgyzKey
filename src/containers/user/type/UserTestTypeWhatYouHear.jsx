@@ -99,7 +99,7 @@ const UserTypeWhatYouHear = ({ question, handleNextClick }) => {
                      sx={textAreaStyle}
                   />
                   <NumberOfReplaysLeft textColor={replaysLeft}>
-                     Number of replays left: {replaysLeft}
+                     Калган кайталоолордун саны: {replaysLeft}
                   </NumberOfReplaysLeft>
                </DivTextAreaandReplays>
             </VolumeDiv>
@@ -111,7 +111,7 @@ const UserTypeWhatYouHear = ({ question, handleNextClick }) => {
                style={{ padding: '12px 54px' }}
                disabled={testResponse.length === 0}
             >
-               NEXT
+               Кийинки
             </Button>
          </ContainerBtn>
       </TypeWhatYouHearDivv>
