@@ -136,15 +136,15 @@ export const humans = [
 ]
 
 export const questionTypes = {
-   SelectRealEnglishWords: 'Select',
-   ListenAndSelect: 'Listen and select English word',
-   TypeWhatYourHear: 'Type what you hear',
-   DescribeImage: 'Describe image',
-   RecordSayingStatement: 'Record saying statement',
-   RespondInAtLeastNWords: 'Respond in at least N words',
-   HighlightTheAnswer: 'Highlight the answer',
-   SelectTheMainIdea: 'Select the main idea',
-   SelectBestTitle: 'Select best title',
+   SelectRealEnglishWords: 'Кыргызча туура сөздү (сөздөрдү) тандаңыз',
+   ListenAndSelect: 'Угуп, кыргызча туура сөздү тандаңыз',
+   TypeWhatYourHear: 'Укканыңызды жазыңыз',
+   DescribeImage: 'Сүрөттү сүрөттөп бер',
+   RecordSayingStatement: 'Айтылган билдирүүнү жазыңыз',
+   RespondInAtLeastNWords: 'Жок дегенде 1 сөз менен жооп бериңиз',
+   HighlightTheAnswer: 'Жообун баса белгиле',
+   SelectTheMainIdea: 'Негизги ойду тандаңыз',
+   SelectBestTitle: 'Мыкты аталышты тандаңыз',
 }
 
 export const questionsApi = {

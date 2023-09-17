@@ -52,7 +52,7 @@ const CheckBestTitle = ({ question, answerId, score }) => {
             ))}
          </OptionsContainer>
          <StyledText style={{ marginTop: '40px' }}>
-            User&#39;s answer
+            &#39;Колдонуучунун жообу
          </StyledText>
          <OptionsContainer>
             {question.userAnswerResponse.map((item, i) => (
@@ -66,10 +66,10 @@ const CheckBestTitle = ({ question, answerId, score }) => {
          </OptionsContainer>
          <ButtonContainer>
             <GoBackButton variant="outlined" onClick={goBackHandler}>
-               Go back
+               Артка кайтуу
             </GoBackButton>
             <SaveButton color="success" variant="contained" onClick={saveScore}>
-               Save
+               Сактоо
             </SaveButton>
          </ButtonContainer>
       </>

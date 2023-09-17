@@ -116,7 +116,7 @@ const TypeWhatYouHearSubmitTest = ({ question, answerId, score }) => {
                   fontWeight: 500,
                }}
             >
-               User’s Answer
+               Колдонуучунун жообу
             </div>
             <div
                style={{
@@ -129,7 +129,7 @@ const TypeWhatYouHearSubmitTest = ({ question, answerId, score }) => {
                   fontWeight: 500,
                }}
             >
-               Entered Statement: {item.data}
+               Киргизилген билдирүү: {item.data}
             </div>
             <div
                style={{
@@ -140,15 +140,15 @@ const TypeWhatYouHearSubmitTest = ({ question, answerId, score }) => {
                   fontWeight: 500,
                }}
             >
-               Number of plays: {item.numberOfReplace}
+               Кайталоонун саны: {item.numberOfReplace}
             </div>
          </InfoDiv>
          <DivButtonSaveandGoBack>
             <Button sx={buttonStyleGoBack} onClick={goBack}>
-               go Back
+               Артка кайтуу
             </Button>
             <Button sx={buttonSave} onClick={saveScore}>
-               Save
+               Сактоо
             </Button>
          </DivButtonSaveandGoBack>
       </div>

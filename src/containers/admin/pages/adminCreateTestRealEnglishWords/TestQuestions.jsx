@@ -51,6 +51,7 @@ const menuItemStyle = {
    alignItems: 'start',
    width: '100%',
    height: '42px',
+   fontFamily: 'Oswald',
 }
 
 const TestQuestions = () => {
@@ -123,7 +124,7 @@ const TestQuestions = () => {
                            ? { border: '1px solid #d60b0b' }
                            : { border: '1px solid #6a6666c1' }
                      }
-                     placeholder="Name of the test"
+                     placeholder="Сыноонун аталышы"
                      name="title"
                      onChange={titleOnChangeFunction}
                      value={title}
@@ -132,9 +133,7 @@ const TestQuestions = () => {
                </div>
                <DivTimerInput>
                   <TimeText htmlFor="timeInput">
-                     Узактыгы
-                     <br />
-                     (секунд менен)
+                     Узактыгы <br /> (секунд)
                   </TimeText>
                   <InputNewTime
                      style={
@@ -166,6 +165,7 @@ const TestQuestions = () => {
                   error={!!errorObject.select}
                   displayEmpty
                   defaultValue={state?.question.questionType}
+                  sx={{ fontFamily: 'Oswald' }}
                >
                   <MenuItem value="" disabled>
                      Тестти түрүн тандаңыз

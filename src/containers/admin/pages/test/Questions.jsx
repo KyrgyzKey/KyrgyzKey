@@ -108,6 +108,7 @@ const AddQuestions = () => {
                      <Button
                         variant="contained"
                         onClick={() => navigate(`createtest`)}
+                        sx={{ fontFamily: 'Oswald' }}
                      >
                         + Көбүрөөк суроо кошуу
                      </Button>

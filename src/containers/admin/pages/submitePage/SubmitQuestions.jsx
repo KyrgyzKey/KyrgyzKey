@@ -41,11 +41,11 @@ const SubmiteQuestions = () => {
                   <StyledSpan>{state.questionResponse.title}</StyledSpan>
                </StyledText>
                <StyledText>
-                  Узактыгы{' '}
+                  Узактыгы:
                   <StyledSpan>{state.questionResponse.duration}</StyledSpan>
                </StyledText>
                <StyledText>
-                  Суроо түрү:{' '}
+                  Суроо түрү:
                   <StyledSpan>
                      {questionName(state.questionResponse.questionType)}
                   </StyledSpan>
@@ -72,7 +72,7 @@ const SubmiteQuestions = () => {
                         </StyledSpan>
                      </StyledText>
                      <StyledText>
-                        Суроо билдирүүсү:{' '}
+                        Суроо билдирүүсү:
                         <StyledSpan>
                            {state.questionResponse.statement}
                         </StyledSpan>
