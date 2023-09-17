@@ -20,7 +20,7 @@ const partners = [
 const Partners = () => {
    return (
       <>
-         <PartnersTitle>Partners</PartnersTitle>
+         <PartnersTitle>Биздин оноктоштор</PartnersTitle>
          <Marquee speed={100} gradientWidth={0}>
             <StyledPartners>
                {partners.map((item) => (

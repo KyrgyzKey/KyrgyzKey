@@ -16,6 +16,7 @@ const SlideItem = ({ item, prop }) => {
 export default SlideItem
 
 const ContainerStyle = styled(Grid)(({ background, prop }) => ({
+   fontFamily: 'Oswald',
    maxWidth: prop ? '1028px' : '780px',
    backgroundColor: background,
    boxShadow: '16px 16px 20px rgba(0, 0, 0, 0.3)',
@@ -37,7 +38,6 @@ const InfoStyle = styled(Grid)(() => ({
 
 const TitleStyle = styled('p')(({ textColor }) => ({
    color: textColor,
-   fontfamily: 'Gilroy',
    fontStyle: 'normal',
    fontWeight: 700,
    lineHeight: '46px',
@@ -46,7 +46,7 @@ const TitleStyle = styled('p')(({ textColor }) => ({
    justifySelf: 'self-start',
 }))
 const TextStyle = styled(Typography)(({ prop }) => ({
-   fontfamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '24px',

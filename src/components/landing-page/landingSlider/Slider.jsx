@@ -117,7 +117,6 @@ const TitleContainer = styled(motion(Grid))(() => ({
 }))
 
 const Title = styled(Typography)(() => ({
-   fontfamily: 'Gilroy',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',
@@ -126,6 +125,7 @@ const Title = styled(Typography)(() => ({
 }))
 
 const Container = styled(motion(Grid))(() => ({
+   fontFamily: 'Oswald',
    display: 'flex',
    justifyContent: 'center',
    '& .slick-center': {
@@ -140,6 +140,7 @@ const Container = styled(motion(Grid))(() => ({
 }))
 
 const StyledSlider = styled(Slider)({
+   fontFamily: 'Oswald',
    padding: '40px',
    display: 'grid',
    gridTemplateColumns: 'repeat(3, 1fr)',

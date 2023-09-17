@@ -87,12 +87,14 @@ export default UsefulVideos
 
 const Container = styled(motion(Grid))(() => ({
    background: '#F0F0DC',
+   fontFamily: 'Oswald',
 }))
 
 const FirstSection = styled(Grid)(() => ({
    display: 'flex',
    margin: '0 auto',
    flexDirection: 'column',
+   fontFamily: 'Oswald',
 }))
 
 const TitleContainer = styled(motion(Grid))(() => ({
@@ -100,8 +102,6 @@ const TitleContainer = styled(motion(Grid))(() => ({
 }))
 
 const Title = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
-   fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',
    lineHeight: '48px',
@@ -111,6 +111,7 @@ const Title = styled(Typography)(() => ({
 const SecondSection = styled(Grid)(() => ({
    display: 'flex',
    justifyContent: 'space-evenly',
+   alignItems: 'center',
    flexWrap: 'wrap',
    marginBottom: '120px',
    marginTop: '48px',
@@ -127,15 +128,17 @@ const VideoContainer = styled(motion(Grid))(() => ({
    border: '1px solid #DDDDDD',
    borderRadius: '16px',
    transform: 'matrix(1, 0, 0, 1, 0, 0)',
+   display: 'flex',
+   flexDirection: 'column',
+   justifyContent: 'center',
 }))
 const VideoTitle = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
-   fontStyle: 'normal',
+   fontFamily: 'Oswald',
    fontWeight: 700,
    fontSize: '20px',
    lineHeight: '24px',
    color: '#3A10E5',
-   marginTop: '16px',
-   marginLeft: '20px',
-   marginBottom: '10px',
+   margin: '0 auto',
+   marginTop: '20px',
+   marginBottom: '20px',
 }))
