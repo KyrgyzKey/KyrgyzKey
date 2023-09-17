@@ -67,16 +67,15 @@ const LearnMore = () => {
                whileInView="visible"
                viewport={{ amount: 0.5 }}
             >
-               <BoxStyle>
-                  <motion.div variants={infoAnimation}>
-                     <Title1>Эркин суйлөөнү үйрөнөсүз</Title1>
-                     <Text1>
-                        Кыргыз тилинин жазылышын, айтылышын
-                        <br />
-                        жана сөз айкаштарын үйрөнөсүз
-                     </Text1>
-                  </motion.div>
-               </BoxStyle>
+               <motion.div variants={infoAnimation}>
+                  <Title1>Кыргыз тилинде эркин суйлонуз</Title1>
+                  <Text1>
+                     KyrgyzKey аркылуу кыргыз тилин уйронунуз
+                     <br />
+                     жана кыргыз маданияты менен таанышыныз
+                  </Text1>
+               </motion.div>
+
                <StyledGlobusIcon
                   variants={animation}
                   custom={0.7}
@@ -176,7 +175,7 @@ const LearnMore = () => {
                viewport={{ amount: 0.5 }}
                variants={textAnimation}
             >
-               <ButtonLanding onClick={goToTests}>Get started</ButtonLanding>
+               <ButtonLanding onClick={goToTests}>Баштоо</ButtonLanding>
             </StyledButton>
          </Contain>
       </Background>
@@ -185,15 +184,16 @@ const LearnMore = () => {
 export default LearnMore
 
 const Background = styled(motion(Grid))(() => ({
+   fontFamily: 'Oswald',
    width: '100%',
    zIndex: '-2',
 }))
 const Contain = styled(Grid)(() => ({
    display: 'flex',
    margin: '0 auto',
-   // justifyContent: 'center',
    flexDirection: 'column',
    padding: '0 80px',
+   fontFamily: 'Oswald',
 }))
 
 const TitleContainer = styled(motion(Grid))(() => ({
@@ -201,7 +201,7 @@ const TitleContainer = styled(motion(Grid))(() => ({
 }))
 
 const Title = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',
@@ -228,8 +228,7 @@ const StyledDashboardIcon = styled(motion(Icon4))(() => ({}))
 const StyledDesignIcon = styled(motion(Icon5))(() => ({}))
 
 const Title1 = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
-   fontStyle: 'normal',
+   fontFamily: 'Oswald',
    fontWeight: 600,
    fontSize: '24px',
    lineHeight: '36px',
@@ -238,7 +237,7 @@ const Title1 = styled(Typography)(() => ({
 }))
 
 const Text1 = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -247,6 +246,7 @@ const Text1 = styled(Typography)(() => ({
 }))
 
 const Title2 = styled(Typography)(() => ({
+   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 600,
    fontSize: '24px',
@@ -256,7 +256,7 @@ const Title2 = styled(Typography)(() => ({
 }))
 
 const Text2 = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -264,17 +264,19 @@ const Text2 = styled(Typography)(() => ({
    color: '#23212A',
 }))
 const Container = styled(motion(Grid))(() => ({
+   fontFamily: 'Oswald',
    maxWidth: '70%',
    display: 'flex',
    marginTop: '78px',
    alignItems: 'center',
+   gap: '11rem',
 }))
 const Container1 = styled(motion(Grid))(() => ({
    maxWidth: '100%',
    display: 'flex',
    marginTop: '264px',
    justifyContent: 'flex-end',
-   gap: '215px',
+   gap: '5rem',
    alignItems: 'center',
    overflow: 'hidden',
 }))
@@ -289,7 +291,7 @@ const Container3 = styled(motion(Grid))(() => ({
    maxWidth: '100%',
    display: 'flex',
    marginTop: '150px',
-   gap: '220px',
+   gap: '17rem',
    justifyContent: 'flex-end',
    alignItems: 'center',
    overflow: 'hidden',
@@ -306,12 +308,6 @@ const StyledButton = styled(motion(Grid))(() => ({
    marginTop: '139px',
    display: 'flex',
    justifyContent: 'center',
-}))
-
-const BoxStyle = styled(Box)(() => ({
-   display: 'flex',
-   justifyContent: 'center',
-   width: '55%',
 }))
 
 const BoxStyleSecond = styled(Box)(() => ({

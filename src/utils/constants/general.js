@@ -3,28 +3,28 @@ import { questionTypes } from './common'
 
 export const signUpInputArray = [
    {
-      name: 'firstName',
-      label: 'First name',
+      name: 'Атыныз',
+      label: 'Атыныз',
       type: 'text',
    },
    {
-      name: 'lastName',
-      label: 'Last name',
+      name: 'Фамилия',
+      label: 'Фамилия',
       type: 'text',
    },
    {
       name: 'email',
-      label: 'Email',
+      label: 'Почтаныз',
       type: 'email',
    },
    {
       name: 'password',
-      label: 'Password',
+      label: 'Сыр сөз',
       type: 'password',
    },
    {
       name: 'confirmPassword',
-      label: 'Confirm Password',
+      label: 'Сыр сөздү ырастаңыз',
       type: 'password',
    },
 ]
@@ -99,15 +99,15 @@ export const signUpValidation = Yup.object().shape({
 })
 
 export const signInValidation = Yup.object().shape({
-   email: Yup.string().email().required('Email is required'),
+   email: Yup.string().email().required('Электрондук почта талап кылынат'),
 
    password: Yup.string()
       .matches(
          /^.*(?=.{8,})(?=.*\d)((?=.*[a-z]){1}).*$/,
-         'Password must contain at least 8 characters, one uppercase and one number'
+         'Сыр сөз 8ден кем эмес символду камтышы керек жана кеминде бир баш тамга болушу керек'
       )
-      .required('Password is required')
-      .min(8, 'Password is too short - should be 8 chars minimum'),
+      .required('Сыр сөз талап кылынат!')
+      .min(8, 'Сыр сөз өтө кыска - 8ден кем эмес символ камтышы керек'),
 })
 
 export const createTestValidation = Yup.object().shape({

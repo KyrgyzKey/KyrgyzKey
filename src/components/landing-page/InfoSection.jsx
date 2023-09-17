@@ -13,6 +13,7 @@ import InfoSectionOne from './InfoSectionOne'
 import { OurTeams } from './OurTeams'
 
 const Card = styled('div')(() => ({
+   fontFamily: 'Oswald',
    width: '100%',
    paddingTop: '120px',
    paddingBottom: '120px',
@@ -25,23 +26,22 @@ const Description = styled('div')(() => ({
    marginTop: '120px',
    display: 'flex',
    justifyContent: 'space-between',
+   alignItems: 'center',
    marginBottom: '121.39px',
 }))
 
 const UserExpiriance = styled('div')(() => ({
-   fontFamily: 'Gilroy',
    fontSize: '40px',
    fontWeight: 700,
    lineHeight: '48px',
    textAlign: 'left',
-   width: '21.125rem',
+   width: '40.125rem',
    color: '#3752B4',
 }))
 
 const DescriptionText = styled('div')(() => ({
    width: '90%',
    marginTop: '34px',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '1rem',
@@ -57,7 +57,6 @@ const ImgAccessible = styled('img')(() => ({
 const ImgAccessibleText = styled('div')(() => ({
    width: '160px',
    height: '44px',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -80,7 +79,6 @@ const ImgSpeech = styled('img')(() => ({
 const ImgSpeechText = styled('div')(() => ({
    width: '160px',
    height: '44px',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -103,7 +101,6 @@ const ImgExtensive = styled('img')(() => ({
 const ImgExtensiveText = styled('div')(() => ({
    width: '160px',
    height: '44px',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -126,7 +123,6 @@ const ImgTutoring = styled('img')(() => ({
 const TutoringText = styled('div')(() => ({
    width: '160px',
    height: '44px',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '16px',
@@ -156,13 +152,14 @@ const OurTeam = styled(motion.div)(() => ({
 }))
 
 const TextOurTeam = styled(motion.div)(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',
-   lineHeight: ' 130%',
-   textTransform: 'capitalize',
+   lineHeight: '130%',
+   textTransform: 'uppercase',
    color: '#3752B4',
+   marginBottom: '15px',
 }))
 
 const InfoSection = () => {

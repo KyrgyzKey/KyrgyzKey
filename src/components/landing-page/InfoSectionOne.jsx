@@ -14,7 +14,6 @@ import piggyBankImage1 from '../../assets/images/infoSectionImg/imgGroup3/group-
 import piggyBankImage2 from '../../assets/images/infoSectionImg/imgGroup3/group-2.png'
 import piggyBankRays from '../../assets/images/infoSectionImg/imgGroup3/group-3.png'
 import piggyBankRays2 from '../../assets/images/infoSectionImg/imgGroup3/group-4.png'
-import dollar from '../../assets/images/infoSectionImg/imgGroup3/dollarLogo.png'
 
 const InfoCard = styled(motion.div)(() => ({
    display: 'flex',
@@ -24,6 +23,7 @@ const InfoCard = styled(motion.div)(() => ({
    width: '83.54%',
    height: 'auto',
    margin: '0 auto',
+   fontFamily: 'Oswald',
 }))
 
 const InfoDivOne = styled(motion.div)(() => ({
@@ -221,13 +221,7 @@ const CountNumber3 = styled('h1')(() => ({
    fontSize: '3rem',
    zIndex: 600,
 }))
-const Dollar = styled('img')(() => ({
-   width: '14.19px',
-   height: '26.8px',
-   position: 'relative',
-   right: '7px',
-   top: '-9px',
-}))
+
 const BorderFrameImageOne = styled('div')(() => ({
    display: 'flex',
    justifyContent: 'center',
@@ -324,9 +318,8 @@ const InfoSectionOne = ({ count }) => {
                <PiggyBankRaysImage src={piggyBankRays2} />
                <BorderFrameImageThird>
                   <CountNumber3>
-                     <Dollar src={dollar} />
                      {count && (
-                        <CountUp start={100} end={0} duration={3} delay={0} />
+                        <CountUp start={0} end={14} duration={3} delay={0} />
                      )}
                   </CountNumber3>
                </BorderFrameImageThird>

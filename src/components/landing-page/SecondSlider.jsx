@@ -137,7 +137,7 @@ const SecondSlider = () => {
    return (
       <>
          <TitleContainer>
-            <Title>Эмне үчүн KyrgyzKey?</Title>
+            <Title>Колдонуучулардын ой-пикирлери</Title>
          </TitleContainer>
          <Container>
             <StyledSlider {...settings}>
@@ -164,7 +164,7 @@ const TitleContainer = styled(Grid)(() => ({
 }))
 
 const Title = styled(Typography)(() => ({
-   fontfamily: 'Gilroy',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',
@@ -203,7 +203,7 @@ const UserContainer = styled(Grid)(({ prop }) => ({
 
 const UserText = styled(Typography)(({ prop }) => ({
    textAlign: 'center',
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: '400',
    fontSize: '16px',
@@ -225,7 +225,7 @@ const UserName = styled(Typography)(({ prop }) => ({
 const StyledSlider = styled(Slider)({
    padding: '0 30px',
    display: 'grid',
-   gridTemplateColumns: 'repeat(3, auto)',
+   gridTemplateColumns: 'repeat(4, auto)',
    gridTemplateRows: 'repeat(1, auto)',
    alignItems: 'center',
    justifyItems: 'center',

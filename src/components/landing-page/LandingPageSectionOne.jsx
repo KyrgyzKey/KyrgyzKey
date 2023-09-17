@@ -2,8 +2,7 @@ import { keyframes, styled } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import logo from '../../assets/icons/logo.svg'
-import imageBubble from '../../assets/images/bubble.png'
+// import imageBubble from '../../assets/images/bubble.png'
 import cap from '../../assets/images/cap.png'
 import imageBook from '../../assets/images/books.png'
 import Button from '../UI/buttons/Buttons'
@@ -34,7 +33,9 @@ const slideInAnimation = keyframes`
 
 const LandingPage = styled('div')(() => ({
    width: '100%',
-   background: ' #FCD200',
+   backgroundImage:
+      'linear-gradient(to right top, #c93d7d, #c45ba0, #b976bd, #ae8ed1, #a6a4de, #979cd6, #8895ce, #788dc6, #596aad, #3e4893, #242678, #08025c)',
+   animation: 'gradient-animation 1s ease infinite',
 }))
 
 const LogoAndButtonDiv = styled('div')(({ bgColor }) => ({
@@ -46,13 +47,17 @@ const LogoAndButtonDiv = styled('div')(({ bgColor }) => ({
    backgroundColor: bgColor ? '' : '#fff',
    padding: '20px 0',
    width: '100%',
-   transition: 'background 0.2s ease',
+   transition: 'background 0.5s ease',
 }))
 
-const Logo = styled('img')(() => ({
-   height: '48px',
-   padding: '0 0 0 80px',
-}))
+// const Logo = styled('h1')(() => ({
+//    position: 'relative',
+//    padding: '0 0 0 50rem',
+//    fontFamily: 'Oswald',
+//    fontWeight: 700,
+//    fontSize: '1rem',
+//    // transform: 'scaleX(1)',
+// }))
 
 const ButtonDiv = styled('div')(() => ({
    display: 'flex',
@@ -62,7 +67,7 @@ const ButtonDiv = styled('div')(() => ({
 const ButtonToComeIn = styled(Button)(() => ({
    padding: '13px 24px',
    fontSize: '1rem',
-   letterSpacing: ' 0.2em',
+   letterSpacing: '0.2em',
    fontFamily: 'Oswald',
    lineHeight: '16px',
 }))
@@ -84,13 +89,14 @@ const RegisterBtn = styled(Button)(() => ({
       border: 'none',
    },
 }))
-const ImgBubble = styled('img')(() => ({
-   height: '41.25rem',
-   width: '100%',
-   mixBlendMode: 'overlay',
-   marginTop: '-43.75rem',
-   animation: `${slideInAnimation} 1s ease-in-out`,
-}))
+// const ImgBubble = styled('div')(() => ({
+//    height: '41.25rem',
+//    width: '100%',
+//    // mixBlendMode: 'overlay',
+//    // marginTop: '-43.75rem',
+//    background: 'linear-gradient(45deg,deepskyblue,darkviolet,blue)',
+//    animation: 'gradient-animation 18s ease infinite',
+// }))
 const EnglishProficiency = styled('div')(() => ({
    width: '50%',
    margin: '0 0 30px',
@@ -104,10 +110,12 @@ const ProveYourEnglish = styled('h1')(() => ({
    fontWeight: 700,
    fontSize: '60px',
    lineHeight: '73px',
-   color: ' #43404E',
+   color: '#fff',
    animation: `${fadeInAnimation} 1s ease-in-out`,
+   WebkitTextStroke: '0.5px black',
 }))
 const DivInfo = styled('div')(() => ({
+   fontFamily: 'Oswald',
    padding: '180px 0',
    margin: '0 0 0 4.5625rem',
    lineHeight: '73px',
@@ -115,7 +123,7 @@ const DivInfo = styled('div')(() => ({
    zIndex: 1,
    animation: `${slideInAnimation} 1s ease-in-out`,
 }))
-const Bilingual = styled('h1')(() => ({
+const KyrgyzKey = styled('h1')(() => ({
    fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 600,
@@ -129,12 +137,12 @@ const Bilingual = styled('h1')(() => ({
 const TextDivInfo = styled('div')(() => ({
    width: '60%',
    margin: '0 0 2.8125rem',
-   fontFamily: 'Poppins',
    fontStyle: 'normal',
-   fontWeight: 400,
+   fontWeight: 700,
    fontSize: '20px',
+   color: '#08025c',
    lineHeight: '30px',
-   color: '#23212A',
+   textShadow: '0px 0px 1px rgba(10, 44, 100, 5)',
    animation: `${fadeInAnimation} 1s ease-in-out`,
 }))
 
@@ -150,7 +158,7 @@ const AcademicCap = styled('img')(() => ({
 const ImageBooks = styled('img')(() => ({
    position: 'absolute',
    width: '594.78px',
-   height: '499px',
+   height: '390px',
    top: '293px',
    right: '0',
    animation: `${slideInAnimation} 1s ease-in-out`,
@@ -158,6 +166,18 @@ const ImageBooks = styled('img')(() => ({
 
 const ButtonToBegin = styled('div')(() => ({
    // marginleft: '80px',
+}))
+
+const KyrgyzKeyLandingPage = styled('div')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '10rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   textTransform: 'uppercase',
+   margin: '0 0 0 -6px',
+   marginBottom: '2.5rem',
 }))
 
 const LandingPageSectionOne = () => {
@@ -200,7 +220,20 @@ const LandingPageSectionOne = () => {
       <LandingPage>
          {/* Header */}
          <LogoAndButtonDiv bgColor={bgColor}>
-            <Logo loading="lazy" src={logo} />
+            <div style={{ margin: '0 0 0 4.5625rem' }}>
+               {bgColor ? (
+                  ''
+               ) : (
+                  <KyrgyzKey>
+                     Kyrgyz
+                     <span
+                        style={{ color: '#fff', WebkitTextStroke: '1px black' }}
+                     >
+                        Key
+                     </span>
+                  </KyrgyzKey>
+               )}
+            </div>
             <ButtonDiv>
                {isAuthorized ? (
                   <>
@@ -229,19 +262,21 @@ const LandingPageSectionOne = () => {
 
          <DivInfo id="home">
             <EnglishProficiency>
-               <Bilingual>Kyrgyz Key</Bilingual>
-               <ProveYourEnglish>кыргыз тилинин ачкычы</ProveYourEnglish>
+               <KyrgyzKeyLandingPage>
+                  Kyrgyz
+                  <span style={{ color: '#fff' }}>Key</span>
+               </KyrgyzKeyLandingPage>
+               <ProveYourEnglish>Кыргыз тилинин ачкычы</ProveYourEnglish>
             </EnglishProficiency>
             <TextDivInfo>
-               Кыргыз тилин өңдөңүз - бул өлкөнүн маданият жана тарыхынын жолун
-               ачкычык.
+               Кыргыз тилин үйрөнүнүз - бул өлкөнүн маданият жана тарыхынына жол
+               ачат
             </TextDivInfo>
             <ButtonToBegin>
                <ButtonLanding onClick={goToTests}>баштоо</ButtonLanding>
             </ButtonToBegin>
          </DivInfo>
-
-         <ImgBubble src={imageBubble} loading="lazy" />
+         {/* <ImgBubble /> */}
          <AcademicCap loading="lazy" src={cap} />
          <ImageBooks loading="lazy" src={imageBook} />
       </LandingPage>
