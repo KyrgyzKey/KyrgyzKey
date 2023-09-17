@@ -20,7 +20,7 @@ const partners = [
 const Partners = () => {
    return (
       <>
-         <PartnersTitle>Биздин оноктоштор</PartnersTitle>
+         <PartnersTitle>Биздин өнөктөштөр</PartnersTitle>
          <Marquee speed={100} gradientWidth={0}>
             <StyledPartners>
                {partners.map((item) => (
@@ -37,7 +37,8 @@ const Partners = () => {
 export default Partners
 
 const PartnersTitle = styled(Typography)(() => ({
-   fontFamily: 'Gilroy',
+   fontFamily: 'Oswald',
+   letterSpacing: '1px',
    fontStyle: 'normal',
    fontWeight: 700,
    fontSize: '40px',

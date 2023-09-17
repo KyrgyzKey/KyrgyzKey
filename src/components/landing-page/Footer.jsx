@@ -6,7 +6,6 @@ import {
    styled,
 } from '@mui/material'
 import React from 'react'
-import { ReactComponent as Bilingual } from '../../assets/icons/footerLogo.svg'
 import { ReactComponent as YouTube } from '../../assets/icons/youTube.svg'
 import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg'
 import { ReactComponent as Instagram } from '../../assets/icons/instagram.svg'
@@ -14,24 +13,20 @@ import { ReactComponent as PlusIcon } from '../../assets/icons/plus.svg'
 
 const FAQ = [
    {
-      question: 'What is Bilingual?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, autem. Soluta at ut perferendis, debitis nisi quidem porro libero, impedit voluptatum expedita vero? Qui aspernatur officiis ut, rem doloribus id.',
+      question: 'Эмне үчүн KyrgyzKey?',
+      text: 'Биздин платформа колдонуучулар учун ыңгайлуу, жеткиликтуу жана сиздердин талаптарыңызга ыңгайлуу жаңыланып турат',
    },
    {
-      question: 'How can I show what I am typing during the test?',
-      text: "Please take the test in a separate, quiet room. Close all other windows and close all other programs before starting the test.An external USB keyboard or mouse can be used during the test. However, when answering test questions, you should only type on one keyboard and use one mouse. Don't switch between multiple keyboards or mice.",
+      question: 'Проекттин негизги багыты эмнеде?',
+      text: 'Кыргыз тилин өнүктүрүү жана анын маданият тарыхын кененирээк жайылтуу.',
    },
    {
-      question: 'Why should I take the Bilingual English Test?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate alias, omnis incidunt nemo accusamus consequuntur illum, porro, quos corrupti voluptas consectetur. Quam voluptatum praesentium eos adipisci eum libero aliquid.',
+      question: 'Тест учурунда эмне учун микрофон керек?',
+      text: 'Биз кыргыз тилинин бир гана жазылышына эмес, айтылышына да маани беребиз. Ошондуктан микрофонду жандырып суйлөөгө туура келет',
    },
    {
-      question: 'How can I make sure my microphone picks up my voice clearly?',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis expedita eius aperiam dolorum ipsum harum aut quis perspiciatis exercitationem in! Officia incidunt architecto rem exercitationem ducimus fugiat voluptatibus nobis voluptatum!',
-   },
-   {
-      question: "How can I allow a test to record my computer's screen?",
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda facere, esse voluptatibus excepturi labore delectus, cumque ipsa ex expedita soluta debitis consequatur sequi quas vero dicta perferendis, harum nemo.',
+      question: 'Тестти өзүм түзсөм болобу?',
+      text: 'Жок, бир гана даяр суроолорго жооп бере аласыз. Бирок келе жаткан жаңылоодо бул функцияны кошуп бере алабыз',
    },
 ]
 
@@ -40,7 +35,7 @@ const Footer = () => {
       <StyledFooter>
          <div>
             <div>
-               <StyledTitle>FAQ:</StyledTitle>
+               <StyledTitle>Көп берилүүчү суроолор:</StyledTitle>
             </div>
             {FAQ.map((item) => (
                <MuiAccordion disableGutters key={item.question}>
@@ -50,14 +45,13 @@ const Footer = () => {
                      <Question>{item.question}</Question>
                   </MuiAccordionSummary>
                   <MuiAccordionDetails>
-                     <Typography>{item.text}</Typography>
+                     <Typography style={{ fontFamily: 'Oswald' }}>
+                        {item.text}
+                     </Typography>
                   </MuiAccordionDetails>
                </MuiAccordion>
             ))}
             <Logos>
-               <a href="#home" style={{ cursor: 'pointer' }}>
-                  <Bilingual />
-               </a>
                <SocialNetwork>
                   <a href="https://youtube.com/@Bilingua.education">
                      <YouTube />
@@ -72,7 +66,7 @@ const Footer = () => {
             </Logos>
             <Copyright>
                <Typography>
-                  © Copyright PeakSoft. All Rights Reserved
+                  © Copyright KyrgyzKey. All Rights Reserved
                </Typography>
             </Copyright>
          </div>
@@ -87,10 +81,11 @@ const StyledFooter = styled('footer')(() => ({
    color: '#fff',
    padding: '60px 110px 12px',
    margin: '120px 0 0 0',
+   fontFamily: 'Oswald',
 }))
 
 const StyledTitle = styled(Typography)(() => ({
-   fontFamily: 'Open Sans',
+   fontFamily: 'Oswald',
    fontWeight: 700,
    letterSpacing: '3px',
    fontSize: '40px',
@@ -100,6 +95,7 @@ const StyledTitle = styled(Typography)(() => ({
 }))
 
 const MuiAccordion = styled(Accordion)(() => ({
+   fontFamily: 'Oswald',
    backgroundColor: '#262626',
    color: '#fff',
    borderBottom: '1px solid #4a4a4a',
@@ -109,6 +105,7 @@ const MuiAccordion = styled(Accordion)(() => ({
 }))
 
 const MuiAccordionSummary = styled(AccordionSummary)(() => ({
+   fontFamily: 'Oswald',
    padding: '0',
    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
       transform: 'rotate(45deg)',
@@ -120,8 +117,7 @@ const MuiAccordionDetails = styled(AccordionDetails)({
 })
 
 const Question = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
-   fontStyle: 'normal',
+   fontFamily: 'Oswald',
    fontWeight: 600,
    fontSize: '20px',
    lineHeight: '40px',

@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 // import imageBubble from '../../assets/images/bubble.png'
 import cap from '../../assets/images/cap.png'
 import imageBook from '../../assets/images/books.png'
-// import LandingButton from '../UI/buttons/LandingButtton'
 import Button from '../UI/buttons/Buttons'
 import { signOut } from '../../redux/auth/auth.thunk'
 import ButtonLanding from '../UI/buttons/LandingButton'
@@ -48,17 +47,17 @@ const LogoAndButtonDiv = styled('div')(({ bgColor }) => ({
    backgroundColor: bgColor ? '' : '#fff',
    padding: '20px 0',
    width: '100%',
-   transition: 'background 0.2s ease',
+   transition: 'background 0.5s ease',
 }))
 
-const Logo = styled('h1')(() => ({
-   position: 'relative',
-   padding: '0 0 0 50rem',
-   fontFamily: 'Oswald',
-   fontWeight: 700,
-   fontSize: '1rem',
-   // transform: 'scaleX(1)',
-}))
+// const Logo = styled('h1')(() => ({
+//    position: 'relative',
+//    padding: '0 0 0 50rem',
+//    fontFamily: 'Oswald',
+//    fontWeight: 700,
+//    fontSize: '1rem',
+//    // transform: 'scaleX(1)',
+// }))
 
 const ButtonDiv = styled('div')(() => ({
    display: 'flex',
@@ -111,8 +110,9 @@ const ProveYourEnglish = styled('h1')(() => ({
    fontWeight: 700,
    fontSize: '60px',
    lineHeight: '73px',
-   color: ' #43404E',
+   color: '#fff',
    animation: `${fadeInAnimation} 1s ease-in-out`,
+   WebkitTextStroke: '0.5px black',
 }))
 const DivInfo = styled('div')(() => ({
    fontFamily: 'Oswald',
@@ -123,7 +123,7 @@ const DivInfo = styled('div')(() => ({
    zIndex: 1,
    animation: `${slideInAnimation} 1s ease-in-out`,
 }))
-const Bilingual = styled('h1')(() => ({
+const KyrgyzKey = styled('h1')(() => ({
    fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 600,
@@ -168,6 +168,18 @@ const ButtonToBegin = styled('div')(() => ({
    // marginleft: '80px',
 }))
 
+const KyrgyzKeyLandingPage = styled('div')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '10rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   textTransform: 'uppercase',
+   margin: '0 0 0 -6px',
+   marginBottom: '2.5rem',
+}))
+
 const LandingPageSectionOne = () => {
    const dispatch = useDispatch()
    const { isAuthorized } = useSelector((state) => state.auth)
@@ -208,7 +220,20 @@ const LandingPageSectionOne = () => {
       <LandingPage>
          {/* Header */}
          <LogoAndButtonDiv bgColor={bgColor}>
-            <Logo>K</Logo>
+            <div style={{ margin: '0 0 0 4.5625rem' }}>
+               {bgColor ? (
+                  ''
+               ) : (
+                  <KyrgyzKey>
+                     Kyrgyz
+                     <span
+                        style={{ color: '#fff', WebkitTextStroke: '1px black' }}
+                     >
+                        Key
+                     </span>
+                  </KyrgyzKey>
+               )}
+            </div>
             <ButtonDiv>
                {isAuthorized ? (
                   <>
@@ -234,13 +259,13 @@ const LandingPageSectionOne = () => {
                )}
             </ButtonDiv>
          </LogoAndButtonDiv>
-         {/* Header */}
 
          <DivInfo id="home">
             <EnglishProficiency>
-               <Bilingual>
-                  Kyrgyz<span style={{ color: '#fff' }}>Key</span>
-               </Bilingual>
+               <KyrgyzKeyLandingPage>
+                  Kyrgyz
+                  <span style={{ color: '#fff' }}>Key</span>
+               </KyrgyzKeyLandingPage>
                <ProveYourEnglish>Кыргыз тилинин ачкычы</ProveYourEnglish>
             </EnglishProficiency>
             <TextDivInfo>

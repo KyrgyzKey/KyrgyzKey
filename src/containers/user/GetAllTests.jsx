@@ -51,9 +51,7 @@ const GetAllTests = () => {
                ) : null
             })
          ) : (
-            <Typography>
-               Sorry, there are no tests available at the moment.
-            </Typography>
+            <Typography>Тилекке каршы, учурда тесттер жок</Typography>
          )}
       </StyledForm>
    )

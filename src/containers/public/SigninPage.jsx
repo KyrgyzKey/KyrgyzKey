@@ -4,8 +4,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { ReactComponent as System } from '../../assets/icons/system.svg'
-import { ReactComponent as Layer } from '../../assets/icons/layer 2.svg'
-// import { ReactComponent as Google } from '../../assets/icons/google.svg'
 import Input from '../../components/UI/input/Input'
 import Checkboxes from '../../components/UI/checkbox/Checkbox'
 import Button from '../../components/UI/buttons/Buttons'
@@ -74,9 +72,7 @@ const SigninPage = () => {
    const submitHandler = (values) => {
       dispatch(signIn(values))
          .unwrap()
-         .then(() =>
-            notify('success', 'Authentication', 'Successfully sign in')
-         )
+         .then(() => notify('Ийгиликтүү кирдиниз!'))
          .then(() => navigate('/user/tests'))
          .catch(() => notify('error', 'Authentication', 'Failed to sign in'))
    }
@@ -103,10 +99,17 @@ const SigninPage = () => {
                <CloseModalIcon onClick={gotToLandingPage} />
             </IconContainer>
             <Container>
-               <Icon2 />
-               <Title> Sign in</Title>
+               <KyrgyzKey>
+                  Kyrgyz
+                  <span
+                     style={{ color: '#fff', WebkitTextStroke: '1px black' }}
+                  >
+                     Key
+                  </span>
+               </KyrgyzKey>
+               <Title>Кирүү</Title>
                <StyledInput
-                  label="Email"
+                  label="Электрондук почтаныз"
                   name="email"
                   error={touched.email && !!errors.email}
                   value={values.email}
@@ -115,7 +118,7 @@ const SigninPage = () => {
                />
 
                <StyledInput
-                  label="Password"
+                  label="Сыр сөз"
                   name="password"
                   error={touched.password && !!errors.password}
                   value={values.password}
@@ -137,7 +140,7 @@ const SigninPage = () => {
                />
                <CheckboxContain>
                   <StyledCheckbox />
-                  <Text>To remember me</Text>
+                  <Text>Эстеп калуу</Text>
                </CheckboxContain>
                <Error>{touched.email && errors.email}</Error>
                <Error>{touched.password && errors.password}</Error>
@@ -146,7 +149,7 @@ const SigninPage = () => {
                   <Spinner />
                ) : (
                   <StyledButton variant="contained" type="submit">
-                     sign in
+                     Кирүү
                   </StyledButton>
                )}
                {/* <ButtonContainer
@@ -157,12 +160,12 @@ const SigninPage = () => {
                   sign in with google
                </ButtonContainer> */}
                <StyledText>
-                  DON`T HAVE AN ACCOUNT?
+                  Аккаунтунуз жокпу?
                   <StyledNavLink
                      disabled={isLoading}
                      to={isLoading ? '' : '/sign-up'}
                   >
-                     REGISTER
+                     Катталуу
                   </StyledNavLink>
                </StyledText>
             </Container>
@@ -179,6 +182,7 @@ const Error = styled('p')(() => ({
 }))
 
 const Background = styled(Grid)(() => ({
+   fontFamily: 'Oswald',
    background: 'linear-gradient(90.76deg, #6B0FA9 0.74%, #520FB6 88.41%)',
    padding: '40px 0',
    height: '100vh',
@@ -206,22 +210,22 @@ const Container = styled(Grid)(() => ({
    width: '500px',
    marginLeft: '58px',
 }))
-const Icon2 = styled(Layer)(() => ({
-   width: '100%',
-}))
 const Title = styled(Typography)(() => ({
    textAlign: 'center',
    marginTop: '12px',
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
-   fontWeight: 500,
+   fontWeight: 400,
    fontSize: '24px',
    lineHeight: '36px',
    color: '#4C4859',
    marginBottom: '32px',
+   textTransform: 'uppercase',
 }))
 
 const StyledInput = styled(Input)(() => ({
+   fontFamily: 'Oswald',
+   fontWeight: 300,
    height: '52px',
    marginBottom: '20px',
 }))
@@ -235,37 +239,30 @@ const StyledCheckbox = styled(Checkboxes)(() => ({
    marginBottom: '30px',
 }))
 const Text = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
-   fontStyle: ' normal',
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
    fontWeight: 400,
-   fontSize: '14px',
+   fontSize: '1.0625rem',
    lineHeight: '0px',
-   color: '#757575',
+   color: '#757571',
    marginTop: '13px',
 }))
 const StyledButton = styled(Button)(() => ({
    height: '52px',
+   fontFamily: 'Oswald',
+   fontSize: '1.225rem',
+   letterSpacing: '0.0625rem',
 }))
-// const ButtonContainer = styled(Button)(() => ({
-//    margin: '34px auto 0',
-//    border: ' 1px solid #BDBDBD',
-//    boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.2)',
-//    borderRadius: '8px',
-//    padding: '10px 10px',
-//    color: '#757575',
-// }))
-// const GoogleIcon = styled(Google)(() => ({
-//    margin: '0 8px 0 0',
-// }))
+
 const StyledText = styled(Typography)(() => ({
    textAlign: 'center',
    marginTop: '24px',
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: '500',
-   fontSize: '14px',
+   fontSize: '1rem',
    lineHeight: '21px',
-   letterSpacing: '0.02em',
+   letterSpacing: '0.05em',
    color: '#757575',
 }))
 
@@ -273,4 +270,15 @@ const StyledNavLink = styled(NavLink)(({ disabled }) => ({
    color: disabled ? '#bdbdbd' : '#3A10E5',
    textDecoration: 'none',
    cursor: disabled ? 'default' : 'pointer',
+}))
+
+const KyrgyzKey = styled('h1')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '3rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   margin: '0 auto',
+   textTransform: 'uppercase',
 }))

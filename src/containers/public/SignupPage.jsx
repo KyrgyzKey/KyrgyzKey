@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { ReactComponent as System } from '../../assets/icons/system.svg'
-import { ReactComponent as Layer } from '../../assets/icons/layer 2.svg'
 import Input from '../../components/UI/input/Input'
 import Button from '../../components/UI/buttons/Buttons'
 import { signUp } from '../../redux/auth/auth.thunk'
@@ -105,8 +104,15 @@ const SignupPage = () => {
                <CloseModalIcon onClick={gotToLandingPage} />
             </IconContainer>
             <Container>
-               <Icon2 />
-               <Title> Create an Account</Title>
+               <KyrgyzKey>
+                  Kyrgyz
+                  <span
+                     style={{ color: '#fff', WebkitTextStroke: '1px black' }}
+                  >
+                     Key
+                  </span>
+               </KyrgyzKey>
+               <Title>Катталуу</Title>
                {signUpInputArray.map((item) => {
                   return (
                      <StyledInput
@@ -144,7 +150,6 @@ const SignupPage = () => {
                      />
                   )
                })}
-
                {/* <Error>{CheckEmail}</Error>
                <Error> {CheckPassword}</Error> */}
                <Error>{touched.firstName && errors.firstName}</Error>
@@ -156,7 +161,7 @@ const SignupPage = () => {
                   <Spinner />
                ) : (
                   <StyledButton variant="contained" type="submit">
-                     sign up
+                     Катталуу
                   </StyledButton>
                )}
                {/* <ButtonContainer
@@ -167,7 +172,7 @@ const SignupPage = () => {
                   sign up with google
                </ButtonContainer> */}
                <StyledText>
-                  ALREADY HAVE AN ACCOUNT?
+                  Аккаунтунуз каттоодон өткөнбү?
                   <StyledNavLink
                      disabled={isLoading}
                      to={isLoading ? '' : '/sign-in'}
@@ -215,19 +220,18 @@ const Container = styled(Grid)(() => ({
    width: '500px',
    marginLeft: '58px',
 }))
-const Icon2 = styled(Layer)(() => ({
-   width: '100%',
-}))
+
 const Title = styled(Typography)(() => ({
    textAlign: 'center',
-   marginTop: '12px',
-   fontFamily: 'Poppins',
+   marginTop: '0.75rem',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
-   fontWeight: 500,
-   fontSize: '24px',
+   fontWeight: 700,
+   fontSize: '2rem',
    lineHeight: '36px',
    color: '#4C4859',
-   marginBottom: '32px',
+   marginBottom: '2rem',
+   textTransform: 'uppercase',
 }))
 
 const StyledInput = styled(Input)(() => ({
@@ -238,6 +242,7 @@ const StyledInput = styled(Input)(() => ({
 const StyledButton = styled(Button)(() => ({
    height: '52px',
    marginTop: '10px',
+   letterSpacing: '0.0625rem',
 }))
 // const ButtonContainer = styled(Button)(() => ({
 //    margin: '34px auto 0',
@@ -265,4 +270,15 @@ const StyledText = styled(Typography)(() => ({
 const StyledNavLink = styled(NavLink)(() => ({
    color: '#3A10E5',
    textDecoration: 'none',
+}))
+
+const KyrgyzKey = styled('h1')(() => ({
+   fontFamily: 'Oswald',
+   fontStyle: 'normal',
+   fontWeight: 600,
+   fontSize: '3rem',
+   lineHeight: '74.88px',
+   color: '#C93D7D',
+   margin: '0 auto',
+   textTransform: 'uppercase',
 }))
