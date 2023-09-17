@@ -35,18 +35,18 @@ const CompleteTest = () => {
    return (
       <FormContainer>
          <Container>
-            <Title>Test is complete!</Title>
+            <Title>Тест жыйынтыкталды</Title>
             <Icon />
          </Container>
          <StyledIcon />
          <Text>
-            Your results were sent for evaluation proccess. <br />
-            After evaluation your results will be sent to your email.
+            Сиздин жыйынтыктарыңыз баалоо үчүн жөнөтүлдү. <br />
+            Баа коюлгандан кийин жыйынтыгы электрондук почтага жөнөтүлөт.
          </Text>
          <Buttons>
-            <ButtonTryAgain onClick={tryAgainTest}>TRY AGAIN</ButtonTryAgain>
+            <ButtonTryAgain onClick={tryAgainTest}>ТЕСТТЕН ӨТҮҮ</ButtonTryAgain>
             <ButtonDone variant="contained" onClick={postSubmitTest}>
-               done
+               кылынды
             </ButtonDone>
          </Buttons>
       </FormContainer>

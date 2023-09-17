@@ -50,22 +50,20 @@ const PracticeTest = () => {
       return (
          <BackgroundContainer>
             <QuitButton onClick={openHandler} variant="contained">
-               Quit test
+               тесттен чыгуу
             </QuitButton>
             <ModalReusable
                modalStyle={modalStyleDiv}
                isOpen={isOpenModal}
                handleClose={closeHandler}
             >
-               <Typography>
-                  Are you sure you want to leave your practice test?
-               </Typography>
+               <Typography>Практикалык тесттен кетүүнү каалайсызбы?</Typography>
                <ContainerBtn>
                   <Button variant="outlined" onClick={navigateGoBackTest}>
-                     quit test
+                     тесттен чыгуу
                   </Button>
                   <Button variant="contained" onClick={closeHandler}>
-                     continue test
+                     тестти уланта берүү{' '}
                   </Button>
                </ContainerBtn>
             </ModalReusable>
@@ -92,9 +90,9 @@ const PracticeTest = () => {
    return (
       <FormContainer>
          <div style={{ textAlign: 'center' }}>
-            <h2 style={{ textAlign: 'center' }}>This test is empty</h2>
+            <h2 style={{ textAlign: 'center' }}>Бул тест бош</h2>
             <Button onClick={navigateGoBackTest} variant="contained">
-               Go Back
+               Артка кайтуу
             </Button>
          </div>
       </FormContainer>

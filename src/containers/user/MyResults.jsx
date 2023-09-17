@@ -66,10 +66,10 @@ const MyResults = () => {
                <TableHead>
                   <TableRow>
                      <StyledTh> # </StyledTh>
-                     <StyledTh> Date of Submition </StyledTh>
-                     <StyledTh> Test name </StyledTh>
-                     <StyledTh> Status </StyledTh>
-                     <StyledTh> Score </StyledTh>
+                     <StyledTh> Берилген күнү </StyledTh>
+                     <StyledTh> Тесттин аталышы </StyledTh>
+                     <StyledTh> Статусу </StyledTh>
+                     <StyledTh> Упай </StyledTh>
                   </TableRow>
                </TableHead>
                <TableBody>
@@ -114,7 +114,7 @@ const MyResults = () => {
                         )
                      })
                   ) : (
-                     <Text>Извините ничего не найдено</Text>
+                     <Text>Кечиресиз эч нерсе табылган жок</Text>
                   )}
                </TableBody>
             </StyledTable>

@@ -30,7 +30,7 @@ const HighlightTheAnswer = ({ question, handleNextClick }) => {
       <Container>
          <QuestionContainer>
             <PassageContainer>
-               <StyledPassageText>passage</StyledPassageText>
+               <StyledPassageText> өтүү</StyledPassageText>
             </PassageContainer>
             <StatementContainer>
                <StyledStatementText
@@ -53,7 +53,7 @@ const HighlightTheAnswer = ({ question, handleNextClick }) => {
                   readOnly: true,
                }}
                value={selectedText}
-               placeholder="Highlighted answer will appear here"
+               placeholder="Белгиленген жооп бул жерде көрүнөт"
             />
             <BtnContainer>
                <Button
@@ -64,7 +64,7 @@ const HighlightTheAnswer = ({ question, handleNextClick }) => {
                   disabled={!selectedText}
                   onClick={nextHandler}
                >
-                  Next
+                  Кийинки
                </Button>
             </BtnContainer>
          </AnswerContainer>

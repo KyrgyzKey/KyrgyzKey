@@ -35,7 +35,7 @@ const ClientMainIdea = ({ question, handleNextClick }) => {
       <Container>
          <QuestionContainer>
             <PassageContainer>
-               <StyledPassageText>passage</StyledPassageText>
+               <StyledPassageText> өтүү</StyledPassageText>
             </PassageContainer>
             <StatementContainer>
                <StyledStatementText>{question.passage}</StyledStatementText>
@@ -62,7 +62,7 @@ const ClientMainIdea = ({ question, handleNextClick }) => {
                   onClick={handleSubmit}
                   disabled={isButtonDisabled}
                >
-                  NEXT
+                  Кийинки
                </Button>
             </ButtonContainer>
          </VariantContainer>

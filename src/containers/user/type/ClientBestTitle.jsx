@@ -35,7 +35,7 @@ const ClientBestTitle = ({ question, handleNextClick }) => {
       <Container>
          <QuestionContainer>
             <PassageContainer>
-               <StyledPassageText>passage</StyledPassageText>
+               <StyledPassageText>өтмөк</StyledPassageText>
             </PassageContainer>
             <StatementContainer>
                <StyledStatementText>{question.passage}</StyledStatementText>
