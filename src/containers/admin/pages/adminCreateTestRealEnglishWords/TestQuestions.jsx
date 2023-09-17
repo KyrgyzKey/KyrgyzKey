@@ -132,7 +132,9 @@ const TestQuestions = () => {
                </div>
                <DivTimerInput>
                   <TimeText htmlFor="timeInput">
-                     Узактыгы <br /> (in seconds)
+                     Узактыгы
+                     <br />
+                     (секунд менен)
                   </TimeText>
                   <InputNewTime
                      style={

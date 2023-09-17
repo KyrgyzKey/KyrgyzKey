@@ -117,7 +117,7 @@ export const createTestValidation = Yup.object().shape({
    title: Yup.string()
       .min(5, 'узундугу 5тен 70ге чейин болушу керек')
       .max(70, 'узундугу 5тен 70ге чейин болушу керек')
-      .required('Required field')
+      .required('Милдеттүү талаа')
       .trim(),
    shortDescription: Yup.string()
       .min(5, 'узундугу 5тен 70ге чейин болушу керек')

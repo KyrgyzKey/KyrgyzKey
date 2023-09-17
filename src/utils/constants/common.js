@@ -136,7 +136,7 @@ export const humans = [
 ]
 
 export const questionTypes = {
-   SelectRealEnglishWords: 'бирдеме',
+   SelectRealEnglishWords: 'Select',
    ListenAndSelect: 'Listen and select English word',
    TypeWhatYourHear: 'Type what you hear',
    DescribeImage: 'Describe image',
