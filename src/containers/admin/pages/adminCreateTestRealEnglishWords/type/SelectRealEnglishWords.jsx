@@ -142,7 +142,7 @@ const SelectRealEnglishWords = ({ title, duration, testId, setError }) => {
          <QuestionModal isOpen={isOpenModalSave} onClose={openModalSave} />
          <CreateTest>
             <Button sx={buttonStyle} type="submit" onClick={openModalSave}>
-               + Тандоо кошуңуз
+               Тандоо кошуңуз
             </Button>
             <TestSelectRealEnglishWordsLine>
                {options.map((elem, i) => (

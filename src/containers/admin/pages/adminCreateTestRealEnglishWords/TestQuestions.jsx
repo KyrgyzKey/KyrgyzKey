@@ -123,7 +123,7 @@ const TestQuestions = () => {
                            ? { border: '1px solid #d60b0b' }
                            : { border: '1px solid #6a6666c1' }
                      }
-                     placeholder="Name of the test"
+                     placeholder="Сыноонун аталышы"
                      name="title"
                      onChange={titleOnChangeFunction}
                      value={title}
@@ -132,7 +132,7 @@ const TestQuestions = () => {
                </div>
                <DivTimerInput>
                   <TimeText htmlFor="timeInput">
-                     Узактыгы <br /> (in seconds)
+                     Узактыгы <br /> (секунд)
                   </TimeText>
                   <InputNewTime
                      style={

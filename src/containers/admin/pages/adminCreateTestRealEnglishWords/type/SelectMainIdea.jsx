@@ -118,7 +118,7 @@ const SelectMainIdea = ({ title, duration, testId, setError }) => {
             </Passage>
             <ButtonContainer>
                <AddOptionsButton onClick={openModalHandler}>
-                  + Тандоо кошуңуз
+                  Тандоо кошуңуз
                </AddOptionsButton>
             </ButtonContainer>
             <OptionsContainer>
