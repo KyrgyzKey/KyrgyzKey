@@ -91,7 +91,7 @@ const InfoContainer = styled(Grid)(() => ({
    display: 'column',
    justifyContent: 'space-between',
    span: {
-      fontFamily: 'Gilroy , Poppins',
+      fontFamily: 'Oswald',
       fontSize: '15px',
       lineHeight: '18px',
       textTransform: 'uppercase',
@@ -103,7 +103,7 @@ const InfoContainer = styled(Grid)(() => ({
 const StyledTitle = styled(Typography)(() => ({
    margin: '15px 0px 20px 0px',
    alingSelf: 'self-start',
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontWeight: 400,
    fontSize: '26px',
@@ -112,7 +112,7 @@ const StyledTitle = styled(Typography)(() => ({
 }))
 
 const StyledDescription = styled(Typography)(() => ({
-   fontFamily: 'Poppins',
+   fontFamily: 'Oswald',
    fontStyle: 'normal',
    fontSize: '16px',
    lineHeight: '18px',
@@ -129,7 +129,7 @@ const StyledButton = styled(Button)(() => ({
    fontWeight: 700,
    gap: '8px',
    marginLeft: '60px',
-   fontFamily: 'Gilroy , Poppins',
+   fontFamily: 'Oswald',
    ':hover': {
       background: '#3A10E5',
       color: '#FFFFFF',

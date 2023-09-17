@@ -13,6 +13,7 @@ export default FormContainer
 
 const MainContainer = styled('div')(() => ({
    padding: '70px 170px',
+   fontFamily: 'Oswald',
 }))
 
 const InsideContainer = styled('div')(() => ({

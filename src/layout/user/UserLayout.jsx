@@ -11,7 +11,7 @@ const UserLayout = () => {
       <>
          {pathname === `/user/tests/${testId}/practice` ? null : (
             <Header
-               title="MY"
+               title="тесттин"
                endpoint="/user/tests"
                resultEndpoint="/user/my-result"
             />

@@ -72,7 +72,9 @@ const SigninPage = () => {
    const submitHandler = (values) => {
       dispatch(signIn(values))
          .unwrap()
-         .then(() => notify('Ийгиликтүү кирдиниз!'))
+         .then(() =>
+            notify('success', 'Authentication', 'Successfully sign in')
+         )
          .then(() => navigate('/user/tests'))
          .catch(() => notify('error', 'Authentication', 'Failed to sign in'))
    }
@@ -228,6 +230,12 @@ const StyledInput = styled(Input)(() => ({
    fontWeight: 300,
    height: '52px',
    marginBottom: '20px',
+   '& input': {
+      fontFamily: 'Oswald',
+   },
+   '& label': {
+      fontFamily: 'Oswald',
+   },
 }))
 const CheckboxContain = styled(Grid)(() => ({
    display: 'flex',

@@ -3,12 +3,12 @@ import { questionTypes } from './common'
 
 export const signUpInputArray = [
    {
-      name: 'Атыныз',
+      name: 'firstName',
       label: 'Атыныз',
       type: 'text',
    },
    {
-      name: 'Фамилия',
+      name: 'lastName',
       label: 'Фамилия',
       type: 'text',
    },
@@ -76,25 +76,25 @@ export const signUpValidation = Yup.object().shape({
          /^.*((?=.*[A-Z]){1}).*$/,
          'First name must contain one uppercase'
       )
-      .required('Firstname is required'),
+      .required('Атынызды жазыныз'),
 
    lastName: Yup.string()
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .matches(/^.*((?=.*[A-Z]){1}).*$/, 'Last name must contain one uppercase')
-      .required('Lastname is required'),
+      .required('Фамилиянызды жазыныз'),
 
-   email: Yup.string().email().required('Email is required'),
+   email: Yup.string().email().required('Электрондук адресинизди жазыныз'),
 
    password: Yup.string()
       .matches(
          /^.*(?=.{8,})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
          'Password must contain at least 8 characters, one uppercase, one number'
       )
-      .required('Password is required')
-      .min(8, 'Password is too short - should be 8 chars minimum'),
+      .required('Сыр сөз талап кылынат')
+      .min(8, 'Сыр сөз өтө кыска - кеминде 8ден кем эмес символ болушу керек'),
    confirmPassword: Yup.string()
-      .required('Password is required')
+      .required('Сыр сөз ырастаныз')
       .oneOf([Yup.ref('password')], 'Your password do not match'),
 })
 
